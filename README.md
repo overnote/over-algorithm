@@ -1,5 +1,38 @@
 ## 一 计算机七巨头工作资料
 
+#### 1.1 计算机组成原理
+
+#### 1.2 操作系统
+
+- [《深入理解计算机系统》](https://book.douban.com/subject/1230413/)：
+- [《现代操作系统》](https://book.douban.com/subject/3852290/)：
+
+#### 1.3 计算机网络
+
+- [《图解HTTP》](https://book.douban.com/subject/25863515/)：
+- [《HTTP权威指南》](https://book.douban.com/subject/10746113/)：
+- [《图解TCP/IP》](https://book.douban.com/subject/24737674/)：
+- [《TCP/IP详解》](https://book.douban.com/subject/1088054/)：     
+- [《计算机网络 自顶向下方法》](https://book.douban.com/subject/1116437/)：
+
+#### 1.4 计算机与C程序设计
+
+- [数据结构与算法](https://github.com/ruyuejun/polaris/blob/master/currency/algorithm.md)：本章节独立出来一个文档
+
+
+#### 1.5 数据库概论
+
+
+#### 1.6 软件工程
+
+
+#### 1.7 编译原理
+
+- [《编译原理》](https://book.douban.com/subject/3296317/)：
+- [《计算机程序的构造与解释》](https://book.douban.com/subject/1148282/)：
+
+
+
 ## 二 计算机七巨头考研资料
 
 #### 2.1 计算机组成原理
