@@ -1,4 +1,4 @@
-## 一 计算机六巨头工作资料
+## 一 计算机五巨头工作资料
 
 - [《深入理解计算机系统》](https://book.douban.com/subject/1230413/)：
 - [《现代操作系统》](https://book.douban.com/subject/3852290/)：
@@ -12,7 +12,7 @@
 - [《计算机程序的构造与解释》](https://book.douban.com/subject/1148282/)：
 
 
-## 二 计算机六巨头考研资料
+## 二 计算机考研资料
 
 #### 2.0 说明
 
@@ -159,4 +159,4 @@ todo
 - [Go](https://github.com/overnote/golang)：详尽的Go领域笔记，包括语法、并发编程、web编程、微服务等
 - [Java](https://github.com/overnote/java)：整理中，Java篇幅过大，整理困难，可能会鸽
 - [Python](https://github.com/overnote/python)：整理中
-- [计算机底层六巨头与考研](https://github.com/overnote/sixg)：组成原理，操作系统，网络，数据结构与程序设计，数据库概论，编译原理，以及附录考研数学，英语，政治
+- [计算机底层五巨头与考研](https://github.com/overnote/fivex)：组成原理，操作系统，网络，数据结构与程序设计，数据库概论，编译原理，以及附录考研数学，英语，政治
