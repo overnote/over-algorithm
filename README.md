@@ -13,7 +13,9 @@
  - [《C++ Primer 中文版》第5版](https://book.douban.com/subject/25708312/)
 
 **数据结构**
- - [数据结构与算法](https://github.com/overnote/algorithm)：数据结构与算法类数据独立到了该地址
+- [《数据结构》(邓俊辉)](https://book.douban.com/subject/25859528/)：C++编写，数据结构书籍集大成者，简洁，详细，深入，笔者力荐。
+
+贴士：如果完全0基础可以看[《大话数据结构》](https://book.douban.com/subject/6424904/)(通用)、[《学习JavaScript数据结构与算法》](https://book.douban.com/subject/26639401/)(JS书写)
 
 **算法入门**
 - [《算法图解》](https://book.douban.com/subject/26979890/)：图文并茂的算法书籍
