@@ -77,10 +77,10 @@
 
 **推荐书籍**地址：https://github.com/ruyuejun/polaris  
 
-**OverNote系列分门别类**：  
-- [架构](https://github.com/overnote/architecture/)：分布式与微服务相关
+**OverNote分类**：  
+- [架构-分布式与微服务](https://github.com/overnote/architecture/)：分布式与微服务相关
 - [计算机底层五巨头](https://github.com/overnote/five-x)：算法、操作系统、网络、组成原理、编译原理，附录数学/英语/政治考研笔记
-- [Server](https://github.com/overnote/server)：包含常用服务端技术：Nginx、mysql、redis、mongodb、linux系统等
+- [服务端常用技术](https://github.com/overnote/server)：Nginx、mysql、redis、mongodb、linux系统等
 - [Go](https://github.com/overnote/golang)：详尽的Go领域笔记，包括语法、并发编程、web编程、微服务等
 - [JavaScript](https://github.com/overnote/javascript)：包含网页、JS、前端工程化、Node、vue、react、小程序等JS相关领域技术
 - [Python](https://github.com/overnote/python)：整理中
