@@ -7,9 +7,6 @@
 程序设计与数据结构：
  - [数据结构与算法](https://github.com/overnote/algorithm)：数据结构与算法类数据独立到了该地址
 
-计算机原理：
-- [《计算机组成与设计：硬件/软件接口》](https://book.douban.com/subject/2110638/)
-
 操作系统：
 - [《深入理解计算机系统》](https://book.douban.com/subject/1230413/)
 - [《现代操作系统》](https://book.douban.com/subject/3852290/)
@@ -21,186 +18,43 @@
 - [《图解TCP/IP》](https://book.douban.com/subject/24737674/)
 - [《TCP/IP详解》](https://book.douban.com/subject/1088054/)     
 
+计算机原理：
+- [《计算机组成与设计：硬件/软件接口》](https://book.douban.com/subject/2110638/)
+
 编译原理：
 - [《编译原理》](https://book.douban.com/subject/3296317/)
 - [《计算机程序的构造与解释》](https://book.douban.com/subject/1148282/)
 
-## 二 计算机五巨头考研资料
+## 考研资料推荐
 
-#### 2.0 计算机通用考研资料
+- [考研资料](https://github.com/overnote/five-x/blob/master/postgraduate.md)：计算机考研资料，数学，英语，政治等资料汇总
 
-```
-计算机通用考研资料：
-        王道论坛系列书籍
-        天勤劳系列书籍
-        《计算机专业基础综合考试大纲解析》
-        《计算机专业基础综合考试复习指南》
-        《计算机学科专业基础综合考试全真模拟试题集》
-```
+## 附录：笔记汇总
 
-#### 2.1 数据结构与C程序设计
+**OverNote**地址：https://github.com/overnote   
 
-```
-指定教材：
-        《C程序设计》谭浩强
-        《数据结构（C语言版）》- 严蔚敏 清华大学教材
-        《数据结构（C语言版 第2版）》- 严蔚敏 人民邮电出版社
-        《数据结构教程(第3版)》- 唐发根 北京航空航天大学教材
-推荐书籍：
-        《C Primer Plus》
-        《C程序设计语言》
-        《数据结构与算法分析：C语言描述》第2版
-        《算法导论》
-辅导资料：
-        《算法与数据结构考研试题精析》（第二版）机械工业出版社 
-        《数据结构考研辅导》李春葆
-```
+**推荐书籍**地址：https://github.com/ruyuejun/polaris  
 
-#### 2.2 计算机组成原理
+**OverNote系列分类**：  
+- [架构笔记](https://github.com/overnote/architecture/)：分布式与微服务相关
+- [服务端常用技术](https://github.com/overnote/server)：包含常用服务端技术：Nginx、mysql、redis、mongodb、linux系统等
+- [数据结构与算法](https://github.com/overnote/algorithm)：数据结构与算法笔记，主讲Go、C版本，另附JS，Java版本
+- [Go](https://github.com/overnote/golang)：详尽的Go领域笔记，包括语法、并发编程、web编程、微服务等
+- [JavaScript](https://github.com/overnote/javascript)：包含网页、JS、前端工程化、Node、vue、react等JS相关领域技术
+- [Python](https://github.com/overnote/python)：整理中
+- [Java](https://github.com/overnote/java)：整理中，Java篇幅过大，整理困难，可能会鸽
+- [计算机底层与考研](https://github.com/overnote/five-x)：## 附录：笔记汇总
 
-```
-指定教材：
-        《计算机组成原理》（第2版）唐朔飞 
-        《计算机组成与设计》(王诚等 清华大学出版社)
+**OverNote**地址：https://github.com/overnote   
 
-推荐书籍：
-        《计算机组成与设计：硬件/软件接口》
+**推荐书籍**地址：https://github.com/ruyuejun/polaris  
 
-辅导资料：
-        《计算机组成原理考研指导》徐爱萍
-        《计算机组成原理--学习指导与习题解答》唐朔飞
-        408王道：https://www.bilibili.com/video/av39642369
-        唐朔飞：https://www.bilibili.com/video/av29949119
-        南京大学-袁春风：https://www.bilibili.com/video/av37572968
-```
-
-#### 2.3 操作系统
-
-```
-指定教材：
-        《计算机操作系统》（第四版）汤子瀛
-        《汇编语言程序设计》白洪欢
-        《计算机组成原理》陆遥
-推荐书籍：
-        《操作系统概念》
-        《操作系统——精髓与设计原理》
-        《深入理解计算机系统》
-
-辅导资料：
-        《操作系统考研辅导教程(计算机专业研究生入学考试全真题解) 》电子科技大学出版社 
-        《操作系统考研指导》清华大学出版社
-```
-
-#### 2.4 计算机网络
-
-```
-指定教材：
-        《计算机网络》(第7版)-谢希仁
-
-推荐书籍：
-        《计算机网络 自顶向下》(Andrew)
-
-辅导资料：
-        《计算机网络知识要点与习题解析》哈尔滨工程大学出版社 
-```
-
-#### 2.5 编译原理
-
-非考研方向，这里就不推荐了，但是面试可能会问，推荐看《编译原理》即可。
-
-#### 2.6 其他科目
-
-```
-数据库：
-
-
-
-软件工程：
-
-
-
-```
-
-## 三 其他学科考研资料
-
-#### 3.1 数学
-
-数学一与数学二区别：
-
-- 数学一科目：高等数学56%，线性代数22%，概率统计22%
-- 数学二科目：高等数学78%，线性代数22%
-- 数学三科目：高等数学56%，线性代数22%，概率统计22%
-
-高等数学资料：
-```     
-《数学分析教程》中科大史济怀
-《高等数学理工四版》吴赣昌
-《数学分析》
-《高等代数》
-《普林斯顿微积分读本》
-
-《高数18讲》、《1000题》、《6+2》、《660》 李正元《400题》、《合工大5套卷》19、18、17年 李林18 19
-```
-
-线性代数资料：
-```
-《线性代数与解析几何》
-《线性代数应该这样学》
-《理工科代数基础》
-
-李永乐《线性代数辅导讲义》
-```
-
-概率论资料：
-```
-
-《概率9讲》
-```
-
-离散数学资料：
-```
-《离散数学及其应用》
-```
-
-#### 3.2 英语
-
-英语一与英语二考题共同点：
-- 1-20题-填空：共10分，每题0.5分
-- 21-40题-阅读理解：共40分，每题2分
-- 41-45题-新题型：共10分，每题2分
-
-英语一专属：
-- 46-50题-翻译：共10分，每题2分，
-- 51和52题-作文：共30分，小作文1为10分，小作文2为20分
-
-英语二专属：
-- 46题-翻译：共15分
-- 47和48题：共25分，小作文1为10分，小作文2为15分
-
-考研资料：
-```
-《练恋有词》：单词学习
-《考研圣经》：适合基础薄弱学习
-《蒋军虎绿皮书》
-《张剑考研英语黄皮书》：适合加强学习
-《考研英语高分写作》：王江涛
-```
-
-#### 3.3 政治
-
-```
-听的徐涛的强化班，用的肖老的全套资料
-```
-
-## 附录：overnote系列笔记
-
-**OverNote**地址：https://github.com/overnote  
-
-- [推荐书籍汇总](https://github.com/ruyuejun/polaris)：记录了所有技术对应的书籍与书评，以及日常使用的工具、网页    
+**OverNote系列分门别类**：  
+- [架构](https://github.com/overnote/architecture/)：分布式与微服务相关
 - [Server](https://github.com/overnote/server)：包含常用服务端技术：Nginx、mysql、redis、mongodb、linux系统等
 - [数据结构与算法](https://github.com/overnote/algorithm)：数据结构与算法笔记，主讲Go、C版本，另附JS，Java版本
 - [Go](https://github.com/overnote/golang)：详尽的Go领域笔记，包括语法、并发编程、web编程、微服务等
 - [JavaScript](https://github.com/overnote/javascript)：包含网页、JS、前端工程化、Node、vue、react等JS相关领域技术
 - [Python](https://github.com/overnote/python)：整理中
-- Java](https://github.com/overnote/java)：整理中，Java篇幅过大，整理困难，可能会鸽
-- [计算机底层五巨头与考研](https://github.com/overnote/five-x)：组成原理，操作系统，网络，数据结构与程序设计，编译原理，以及附录考研数学，英语等
+- [Java](https://github.com/overnote/java)：整理中，Java篇幅过大，整理困难，可能会鸽
+- [计算机底层五巨头与考研](https://github.com/overnote/five-x)：程序设计与算法、操作系统、网络、组成原理、编译原理，附录数学/英语/政治考研笔记
