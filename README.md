@@ -83,7 +83,7 @@
 
 #### 1.4 Linux
 
-- [Linux书籍推荐](https://github.com/serverside)：Linux与生产环境结合密切，本套笔记着重理论，Linux书籍位于serverside仓库
+- [Linux书籍推荐](https://github.com/ruyuejun/polaris/blob/master/currency/serverside.md)：Linux与生产环境结合密切，本套笔记着重理论，Linux书籍位于serverside仓库
 
 ## 三 计算机网络
 
@@ -105,7 +105,7 @@
 
 ## 六 考研资料推荐
 
-- [考研资料](https://github.com/overnote/five-x/blob/master/postgraduate.md)：计算机考研，数学，英语，政治等资料汇总
+- [考研资料](https://github.com/ruyuejun/polaris/blob/master/currency/postgraduate.md)：计算机考研，数学，英语，政治等资料汇总
 
 ## 附录：笔记汇总
 
