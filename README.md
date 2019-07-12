@@ -29,17 +29,15 @@
 
 #### 1.4 算法习题
 
-经典推荐：
+面试方向：
 - [《数据结构与算法经典问题解析》](https://book.douban.com/subject/26834485/)
 - [《编程之美》](https://book.douban.com/subject/3004255/)：微软面试指南集合
 - [《程序员代码面试指南》](https://book.douban.com/subject/26638586/)：面试指南之一
 - [《剑指offer》](https://book.douban.com/subject/27008702/)：面试指南之一
 
-其他推荐：
-```
-《算法竞赛进阶指南》李煜东：适合竞赛训练
-《算法竞赛入门经典》刘汝佳·第2版：适合竞赛训练
-```
+竞赛方向：
+- [《算法竞赛进阶指南》李煜东](https://book.douban.com/subject/30136932/)：适合竞赛训练
+- [《算法竞赛入门经典》刘汝佳·第2版](https://book.douban.com/subject/25902102/)：适合竞赛训练
 
 #### 1.5 学习网址
 
@@ -110,10 +108,11 @@
 **推荐书籍**地址：https://github.com/ruyuejun/polaris  
 
 **OverNote分类**：  
-- [架构-分布式与微服务](https://github.com/overnote/architecture/)：分布式与微服务相关
-- [计算机底层五巨头](https://github.com/overnote/fivex)：算法、操作系统、网络、组成原理、编译原理，附录数学/英语/政治考研笔记
-- [服务端常用技术](https://github.com/overnote/serverside)：Nginx、mysql、redis、mongodb、linux系统等
+- [架构-分布式与微服务](https://github.com/overnote/architecture)：分布式与微服务相关
+- [计算机底层五巨头](https://github.com/overnote/fivex)：数据结构与算法、操作系统、计算机网络、计算机组成原理、编译原理
+- [服务端常用技术](https://github.com/overnote/serverside)：服务端常用技术，如：nginx、mysql、redis、mongodb、linux系统等
 - [Go](https://github.com/overnote/golang)：详尽的Go领域笔记，包括语法、并发编程、web编程、微服务等
 - [JavaScript](https://github.com/overnote/javascript)：包含网页、JS、前端工程化、Node、vue、react、小程序等JS相关领域技术
+- [大数据](https://github.com/overnote/big-data)：整理中
 - [Python](https://github.com/overnote/python)：整理中
 - [Java](https://github.com/overnote/java)：整理中
