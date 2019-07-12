@@ -9,20 +9,17 @@
 #### 1.1 数据结构
 
 经典推荐：
+- [《大话数据结构》](https://book.douban.com/subject/6424904/)：适合C++方向完全0基础观看
+- [《学习JavaScript数据结构与算法》第3版](https://book.douban.com/subject/33441631/)：适合JS方向完全0基础观看
 - [《数据结构》(邓俊辉)](https://book.douban.com/subject/25859528/)：数据结构的集大成者，深入浅出
-
-其他推荐：
-```
-《大话数据结构》：适合C++方向完全0基础观看
-《学习JavaScript数据结构与算法》第3版：适合JS方向完全0基础观看
-```
 
 #### 1.2 算法入门
 
 经典推荐：
-- [《漫画算法》](https://book.douban.com/subject/33420587/)：全彩配图，有趣的入门书
+- [《漫画算法》](https://book.douban.com/subject/33420587/)：全彩配图，有趣的基础入门书
 - [《算法设计与分析基础》第3版](https://book.douban.com/subject/26337727/)：Java书写的经典算法入门书籍
 - [《编程珠玑》](https://book.douban.com/subject/3227098/)：为算法提供了精辟的解题思路，是算法思想学习的瑰宝
+- [《算法》第4版](https://book.douban.com/subject/10432347/)：经典书籍，最好的算法书籍，Java编写
 
 其他推荐：
 ```
@@ -34,8 +31,7 @@
 
 经典推荐：
 - [《数据结构与算法分析》-C语言描述](https://book.douban.com/subject/4924153/)：数据结构与算法进阶的巨匠，也拥有Java版本：[传送门](https://book.douban.com/subject/26745780/)
-- [《算法新解》](https://book.douban.com/subject/26931430/)：言简意赅，不错的算法提升书
-- [《算法》第4版](https://book.douban.com/subject/10432347/)：经典书籍，最好的算法书籍，Java编写
+- [《算法新解》](https://book.douban.com/subject/26931430/)：言简意赅，算是对1.2部分书籍的概要总结
 - [《算法导论》](https://book.douban.com/subject/1885170/)：恢弘巨著，算法领域的代表作
 - [《计算机程序设计艺术》](https://book.douban.com/subject/1130500/)：恢弘巨作，算法领域的里程碑
 
