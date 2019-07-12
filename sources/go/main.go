@@ -1,11 +1,11 @@
 package main
 
 import (
-	"algorithm/array"
-	SequenList "algorithm/list/SequenList"
-	LinkedList "algorithm/list/LinkedList"
-	RingList "algorithm/list/RingList"
-	DoublyList "algorithm/list/DoublyList"
+	"structure/array"
+	SequenList "structure/list/SequenList"
+	LinkedList "structure/list/LinkedList"
+	RingList "structure/list/RingList"
+	DoublyList "structure/list/DoublyList"
  	"fmt"
 )
 

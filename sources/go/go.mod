@@ -1,3 +1,3 @@
-module algorithm
+module structure
 
 go 1.12

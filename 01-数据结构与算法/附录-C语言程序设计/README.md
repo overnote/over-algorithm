@@ -12,7 +12,7 @@
 
 一个程序主要包括两方面：
 - 对数据的描述，即数据结构（data structure）
-- 对操作的描述，即算法（algorithm）
+- 对操作的描述，即算法（structure）
 
 著名计算机科学家沃思提出了一个公式：
 ```
@@ -75,11 +75,11 @@
 #### 4.2 表示法二：流程图 以及三种基本结构
 
 标准协会ANSI规定了一些常用的流程图符号，如下所示：  
-![](../images/programming/01-represent.png)
+![](../images/program/01-represent.png)
 
 比如判断一个年份是否是闰年，使用流程图表示：
 
-![](../images/programming/02-flowdemo.png)  
+![](../images/program/02-flowdemo.png)  
 
 1966年，Bohra和Jacopini提出了三种基本结构来表示良好算法的基本单元：
 - 顺序结构
@@ -91,7 +91,7 @@
 1973年，美国学者I.Nassi和B.Shneiderman提出：去掉箭头流程线，算法都卸载矩形框内，且可以形成不同的从属框，这便是N-S流程图。  
 
 判断闰年的N-S流程图：  
-![](../images/programming/03-N-S.png)
+![](../images/program/03-N-S.png)
 
 #### 4.4 表示法四：伪代码
 
