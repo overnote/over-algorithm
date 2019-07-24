@@ -1,8 +1,10 @@
 ## 说明
 
-算法章节采用`Go`语言作为伪代码，因为Go简单灵活，不具备Go语言基础也能看懂代码。且语法极度简洁，且具备指针设计，极符合当代数据结构与算法学习要求。    
+算法章节采用`Go`语言作为伪代码，因为Go简单灵活，不具备Go语言基础也能看懂代码。且Go语法极度简洁，具备指针设计，符合当代数据结构与算法学习要求。   
 
-[source](https://github.com/overnote/five-x/tree/master/sources)文件夹下也提供了C/C++版本，未来会增加：Java，JavaScript，Rust版本。 
+笔者在[01-00章节]()给出了一部分Go语法简要示例，用于无障碍阅读后续笔记，如果对Go语言有兴趣，也可以查看笔者的[Golang笔记](https://github.com/overnote/golang)进行详细学习。    
+
+同时，对应的数据结构与算法源码也提供了C/C++/JS版本，未来会增加：Java，Rust，Dart版本，文件夹位于：[source](https://github.com/overnote/five-x/tree/master/sources)。  
 
 ## 一 数据结构与算法
 
@@ -13,6 +15,7 @@
 - [《数据结构》(邓俊辉)](https://book.douban.com/subject/25859528/)：数据结构的集大成者，深入浅出
 
 #### 1.2 算法入门
+
 - [《算法图解》](https://book.douban.com/subject/26979890/)：适合基础入门
 - [《漫画算法》](https://book.douban.com/subject/33420587/)：全彩配图，有趣的基础入门书
 - [《算法设计与分析基础》第3版](https://book.douban.com/subject/26337727/)：Java书写的经典算法入门书籍
@@ -44,62 +47,6 @@
 - [力扣](https://leetcode.com/)：著名的算法题网站
 - [算法导论](http://open.163.com/special/opencourse/structures.html)：麻省理工学院公开课
 
-## 二 操作系统
-
-#### 1.1 通用书籍
-
-- [《现代操作系统》第4版](https://book.douban.com/subject/27096665/)：必读经典
-- [《操作系统》第6版-William Stallings](https://book.douban.com/subject/5064311/)
-- [《操作系统导论》](https://book.douban.com/subject/33463930/)
-- [《操作系统概念》第9版](https://book.douban.com/subject/30297919/)
-- [《深入理解计算机系统》](https://book.douban.com/subject/1230413/)
-- [《计算机系统》](https://book.douban.com/subject/26616929/)
-- [《嵌入式实时操作系统μC/OS-III》](https://book.douban.com/subject/20389564/)
-- [《操作系统设计：Xinu方法》](https://book.douban.com/subject/25772410/)
-- [《一个64位操作系统的设计与实现》](https://book.douban.com/subject/30222325/)
-- [《自己动手写操作系统》](https://book.douban.com/subject/1422377/)
-- [《Orange'S:一个操作系统的实现》](https://book.douban.com/subject/3735649/)
-
-#### 1.2 Unix系统
-
-- [《UNIX环境高级编程》第3版](https://book.douban.com/subject/25900403/)：必读经典
-- [《Unix网络编程》卷1和卷2第3版](https://book.douban.com/subject/26434583/)：必读经典
-- [《性能之巅》](https://book.douban.com/subject/26586598/)：必读经典
-- [《Unix编程艺术》](https://book.douban.com/subject/11609943/)
-- [《UNIX操作系统设计》](https://book.douban.com/subject/1035710/)
-- [《Unix内核源码剖析》](https://book.douban.com/subject/25831005/)
-- [《现代体系结构上的UNIX系统》](https://book.douban.com/subject/26290762/)
-
-#### 1.3 Win与Mac
-- [《深入解析Windows操作系统》第6版](https://book.douban.com/subject/25844377/)
-- [《深入解析Mac OS X & iOS操作系统》](https://book.douban.com/subject/25870206/)
-
-#### 1.4 Linux
-
-- [Linux书籍推荐](https://github.com/ruyuejun/polaris/blob/master/currency/serverside.md)：Linux与生产环境结合密切，本套笔记着重理论，Linux书籍位于serverside仓库
-
-## 三 计算机网络
-
-- [《计算机网络 自顶向下方法》](https://book.douban.com/subject/1116437/)
-- [《图解HTTP》](https://book.douban.com/subject/25863515/)
-- [《HTTP权威指南》](https://book.douban.com/subject/10746113/)
-- [《图解TCP/IP》](https://book.douban.com/subject/24737674/)
-- [《TCP/IP详解》](https://book.douban.com/subject/1088054/)    
-- [《图解服务器端网络架构》](https://book.douban.com/subject/26369253/)  
-
-## 四 计算机组成原理
-
-- [《计算机组成与设计：硬件/软件接口》](https://book.douban.com/subject/2110638/)
-
-## 五 编译原理
-
-- [《编译原理》](https://book.douban.com/subject/3296317/)
-- [《计算机程序的构造与解释》](https://book.douban.com/subject/1148282/)
-
-## 六 考研资料推荐
-
-- [考研资料](https://github.com/ruyuejun/polaris/blob/master/currency/postgraduate.md)：计算机考研，数学，英语，政治等资料汇总
-
 ## 附录：笔记汇总
 
 **OverNote**地址：https://github.com/overnote   
@@ -107,11 +54,12 @@
 **推荐书籍**地址：https://github.com/ruyuejun/polaris  
 
 **OverNote分类**：  
-- [架构-分布式与微服务](https://github.com/overnote/architecture)：分布式与微服务相关
-- [计算机底层五巨头](https://github.com/overnote/fivex)：数据结构与算法、操作系统、计算机网络、计算机组成原理、编译原理
-- [服务端常用技术](https://github.com/overnote/serverside)：服务端常用技术，如：nginx、mysql、redis、mongodb、linux系统等
-- [Go](https://github.com/overnote/golang)：详尽的Go领域笔记，包括语法、并发编程、web编程、微服务等
-- [JavaScript](https://github.com/overnote/javascript)：包含网页、JS、前端工程化、Node、vue、react、小程序等JS相关领域技术
-- [大数据](https://github.com/overnote/big-data)：整理中
-- [Python](https://github.com/overnote/python)：整理中
-- [Java](https://github.com/overnote/java)：整理中
+- [Go](https://github.com/overnote/golang)：详尽的Go领域笔记：Go语法、Go并发编程、GoWeb编程、Go微服务等
+- [分布式与微服务架构](https://github.com/overnote/architecture/)：分布式与微服务等架构相关笔记
+- [底层五巨头-数据结构与算法](https://github.com/overnote/fivex-algorithm)：以C/Go实现为主记录数据结构与算法的笔记
+- [服务端常用技术](https://github.com/overnote/serverside)：nginx、mysql、redis、mongodb、linux系统基础等服务端常用技术汇总笔记
+- [JavaScript](https://github.com/overnote/javascript)：包含网页、JS、前端工程化、Node、vue、react、小程序等JS相关领域技术笔记
+- [大数据](https://github.com/overnote/bigdata)：大数据笔记，完善中
+- [Flutter](https://github.com/overnote/flutter)：Dart与Flutter相关笔记，完善中
+- [Python](https://github.com/overnote/python)：Python相关笔记，完善中
+- [Java](https://github.com/overnote/java)：Java相关笔记，完善中
