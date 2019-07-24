@@ -13,9 +13,8 @@
 - [《数据结构》(邓俊辉)](https://book.douban.com/subject/25859528/)：数据结构的集大成者，深入浅出
 
 #### 1.2 算法入门
-
-- [《漫画算法》](https://book.douban.com/subject/33420587/)：全彩配图，有趣的基础入门书
 - [《算法图解》](https://book.douban.com/subject/26979890/)：适合基础入门
+- [《漫画算法》](https://book.douban.com/subject/33420587/)：全彩配图，有趣的基础入门书
 - [《算法设计与分析基础》第3版](https://book.douban.com/subject/26337727/)：Java书写的经典算法入门书籍
 - [《编程珠玑》](https://book.douban.com/subject/3227098/)：为算法提供了精辟的解题思路，是算法思想学习的瑰宝
 - [《算法》第4版](https://book.douban.com/subject/10432347/)：经典书籍，最好的算法书籍，Java编写
