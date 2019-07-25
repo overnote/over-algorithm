@@ -2,7 +2,7 @@
 
 算法章节采用`Go`语言作为伪代码，因为Go简单灵活，不具备Go语言基础也能看懂代码。且Go语法极度简洁，具备指针设计，符合当代数据结构与算法学习要求。   
 
-笔者在[01-00章节]()给出了一部分Go语法简要示例，用于无障碍阅读后续笔记，如果对Go语言有兴趣，也可以查看笔者的[Golang笔记](https://github.com/overnote/golang)进行详细学习。    
+笔者在[01-00章节](https://github.com/overnote/fivex-algorithm/blob/master/01-走进算法/00-Go语言概述.md)给出了一部分Go语法简要示例，用于无障碍阅读后续笔记，如果对Go语言有兴趣，也可以查看笔者的[Golang笔记](https://github.com/overnote/golang)进行详细学习。    
 
 同时，对应的数据结构与算法源码也提供了C/C++/JS版本，未来会增加：Java，Rust，Dart版本，文件夹位于：[source](https://github.com/overnote/five-x/tree/master/sources)。  
 
