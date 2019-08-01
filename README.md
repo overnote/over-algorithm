@@ -56,7 +56,7 @@
 **OverNote分类**：  
 - [Go](https://github.com/overnote/golang)：详尽的Go领域笔记：Go语法、Go并发编程、GoWeb编程、Go微服务等
 - [分布式与微服务架构](https://github.com/overnote/architecture/)：分布式与微服务等架构相关笔记
-- [数据结构与算法](https://github.com/overnote/algorithm)：以C/Go实现为主，记录数据结构与算法
+- [数据结构与算法](https://github.com/overnote/algorithm)：以C/Go实现为主记录数据结构与算法的笔记
 - [服务端常用技术](https://github.com/overnote/serverside)：nginx、mysql、redis、mongodb、linux系统基础等服务端常用技术汇总笔记
 - [JavaScript](https://github.com/overnote/javascript)：包含网页、JS、前端工程化、Node、vue、react、小程序等JS相关领域技术笔记
 - [大数据](https://github.com/overnote/bigdata)：大数据笔记，完善中
