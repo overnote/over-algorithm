@@ -74,7 +74,7 @@ void fn(int arrp[][maxSize], int n){
 ```
 
 
-## 数据结构与算法资料
+## 数据结构与算法书籍
 
 ### 1.1 入门书籍
 
@@ -99,7 +99,7 @@ void fn(int arrp[][maxSize], int n){
 - [《算法导论》](https://book.douban.com/subject/1885170/)：恢弘巨著，算法领域的代表作
 - [《计算机程序设计艺术》](https://book.douban.com/subject/1130500/)：恢弘巨作，算法领域的里程碑
 
-#### 1.5 算法习题
+### 1.5 算法习题
 
 面试方向：
 - [《编程珠玑》](https://book.douban.com/subject/3227098/)：为算法提供了精辟的解题思路，是算法思想学习的瑰宝
@@ -117,13 +117,15 @@ void fn(int arrp[][maxSize], int n){
 - [《算法笔记》](https://book.douban.com/subject/26827295/)：适合考研复习、PAT考试
 - [《算法笔记上机训练实战指南》](https://book.douban.com/subject/30162908/)：算法笔记配套练习册
 
-#### 1.6 算法资料
+## 算法资料
 
-- [网站：力扣](https://leetcode.com/)：著名的算法题网站
-- [网站：牛客网](https://www.nowcoder.com/)：面向基础与面试的算法题库
-- [视频：浙江大学-陈越姥姥-数据结构](https://www.icourse163.org/course/ZJU-93001)
-- [视频：邓俊辉数据结构](https://www.bilibili.com/video/av47473308)
-- [视频：邓俊辉算法](https://www.bilibili.com/video/av49361421)
+网站：
+- [力扣](https://leetcode.com/)：著名的算法题网站
+- [牛客网](https://www.nowcoder.com/)：面向基础与面试的算法题库
+
+视频：
+- [浙江大学-陈越姥姥-数据结构](https://www.icourse163.org/course/ZJU-93001)
+- [清华大学-邓俊辉-数据结构与算法](https://www.bilibili.com/video/av49361421)
 
 ## 附录：笔记汇总
 
