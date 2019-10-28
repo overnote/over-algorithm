@@ -129,9 +129,9 @@ void fn(int arrp[][maxSize], int n){
 
 ## 附录：笔记汇总
 
-**OverNote**地址：https://github.com/overnote   
+**OverNote**全系列地址：https://github.com/overnote   
 
-**推荐书籍**地址：https://github.com/ruyuejun/polaris  
+欢迎关注up主：https://github.com/ruyuejun
 
 **OverNote分类**：  
 - [Go](https://github.com/overnote/over-golang)：详尽的Go领域笔记：Go语法、Go并发编程、GoWeb编程、Go微服务等
