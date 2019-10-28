@@ -1,8 +1,13 @@
 ## 说明
 
-算法章节采用`Go`语言、`C`语言双份解题思路。因为Go语法极简，读者即使不具备Go语言基础也能看懂代码。如果对Go语言有兴趣，也可以查看笔者的[Golang笔记](https://github.com/overnote/over-golang)进行详细学习。    
+本算法笔记采用`C`、`Go`两种语言解题，既满足了大部分算法书籍、大学课程以C为基础的需要，也能满足大家学习利用新兴语言Go解决算法题的期望。  
+
+Go语法极简，读者即使不具备Go语言基础也能看懂代码，如果对Go语言有兴趣，也可以查看笔者的[Golang笔记](https://github.com/overnote/over-golang)进行详细学习。    
 
 对应的数据结构与算法源码也提供了部分js、java等其他语言版本，文件夹位于：[source](https://github.com/overnote/five-x/tree/master/sources)，有兴趣可以提交各种语言版本噢。   
+
+笔记的一些贴士：
+- `严本` 即 严蔚敏版本的意思
 
 ## 一 数据结构与算法
 
