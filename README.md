@@ -7,72 +7,11 @@ Go语法极简，读者即使不具备Go语言基础也能看懂代码，如果�
 对应的数据结构与算法源码也提供了部分js、java等其他语言版本，文件夹位于：[source](https://github.com/overnote/five-x/tree/master/sources)，有兴趣可以提交各种语言版本噢。   
 
 笔记的一些贴士：
-- `严本` 即 严蔚敏版本的意思
-
-## C语言的一些规范
-
-### 规范一：结点的表示方式
-推荐链表结点的表示方式：
-```c
-typedef struct Node {
-    int data;
-    struct Node *next;
-}Node;
-```
-
-推荐树结点的表示方式：
-```c
-typedef struct BTNode {
-    int data;
-    struct BTNode *lchild;
-    struct BTNode *rchild;
-}BTNode
-```
-上述结构体写法更加严谨，能够通过纯C编译器的编译（适合考研党）！ 
-
-### 规范二：结点的申请方式
-结点的申请有两种方式：
-```c
-// 方式一：不推荐
-BTNode BT;      // 此时取值方式：x=BT.data
-
-// 方式二：推荐。先定义一个节点指针BT，然后让BT指向这片内存空间。
-BTNode *BT;
-BT = （BTNode *）malloc(sizeof(BTNode));
-```
-方式一的BT只是某个节点的名字，定义好后无法脱离该节点，而方式二只是一个指针，可以随时指向其他结点。  
-
-动态申请一组结点，如动态申请数组空间，推荐写法：
-```c
-int *arr;
-arr = (int *)malloc(n * sizeof(int));       // 元素类型为int，长度为n的动态数组
-```
-
-### 规范三：函数的引用传参
-
-值类型作为函数形参时，如果希望修改原本的值，则使用以下方式：
-```c
-void fn(int *&x) {
-
-}
-```
-
-一维数组作为参数写法：
-```c
-//  参数一无需限定长度，参数二是个习惯，用来说明数组实际元素的个数，并不是总长度
-void fn(int arr[], int n){
-    
-}
-```
-
-二维数组作为参数写法：
-```c
-// 第一个参数中的第一个[]无需写长度，第二个[]必须写数组长度的常量
-void fn(int arrp[][maxSize], int n){
-
-}
-```
-
+- 在理论描述上，均使用基于C语言的最基础代码展示，读者不必担忧因为对C的不了解产生阅读障碍
+- 在代码实现上，笔记中所有的数据结构与算法均使用考研标准C、Go、JS三种语言同时描述，并在source目录中上传了全部源码
+  - C版本以标准C为基础，适合考研党。
+  - Go的实现以开发需要、面向对象为准则，并使用Go Module规范实现
+  - JS的实现以开发需要、面向对象为准则，并使用ES6、ES Module规范实现，笔者已经配置好了编译模块
 
 ## 数据结构与算法书籍
 
@@ -95,8 +34,8 @@ void fn(int arrp[][maxSize], int n){
 
 ### 1.4 算法进阶
 
-- [《算法新解》](https://book.douban.com/subject/26931430/)
-- [《算法导论》](https://book.douban.com/subject/1885170/)：恢弘巨著，算法领域的代表作
+- [《算法新解》](https://book.douban.com/subject/26931430/)：大量复杂数据结构的深入，难度较大
+- [《算法导论》](https://book.douban.com/subject/1885170/)：算法领域的代表作
 - [《计算机程序设计艺术》](https://book.douban.com/subject/1130500/)：恢弘巨作，算法领域的里程碑
 
 ### 1.5 算法习题
