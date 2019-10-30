@@ -122,9 +122,13 @@ func (l *SqList) GetElem(index int) (e ElemeType, err error) {
 
 // 查询：按值查询位序
 func (l *SqList) LocateElem(e ElemeType) (index int, err error) {
+
+	err = errors.New("未找到")
+
 	for i := 0; i < l.length; i++ {
 		if l.elem[i] == e {
 			index = i + 1
+			err = nil
 			break
 		}
 	}

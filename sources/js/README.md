@@ -6,5 +6,5 @@
 ```
 # 在sources/js 目录中
 npm install
-
+npx babel-node index.js         // 修改 index.js 中的 测试方法即可
 ```
