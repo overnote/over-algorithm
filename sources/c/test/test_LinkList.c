@@ -10,10 +10,11 @@ void test_LinkList() {
     printf("追加元素-------------\n");
     LinkListAppend(&L, 17);
     LinkListAppend(&L, 19);
-    LinkListAppend(&L, 22);
-    printf("%d\n", LinkListLength(&L));
     LinkListDisplay(&L);
-    
+
+    printf("插入元素-------------\n");
+    LinkListInsert(&L, 2, 18);
+    LinkListDisplay(&L);
 
 
     printf("********** 顺序表测试结束 **********\n");

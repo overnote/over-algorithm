@@ -115,16 +115,15 @@ Status LinkListInsert(LinkList *L, int index, ElemType e){
         return TRUE;
     }
     
-    // 找到插入位置的前一个节点
+    // 如果在末尾插入：找到插入位置的前一个节点
     struct LinkNode *currentNode = L->first;
-    int count = 1;
-    while ( count <= index - 1){
+    while ( index > 2){
         currentNode = currentNode->next;
-        count++;
+        index--;
     }
 
     // 切键
-    insertNode->next = currentNode->next->next;
+    insertNode->next = currentNode->next;
     currentNode->next =insertNode;
     L->length++;
     return TRUE;
