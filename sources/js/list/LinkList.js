@@ -1,6 +1,3 @@
-## 链表的JS实现
-
-```js
 /**
  * 单链表
  */
@@ -175,4 +172,3 @@ class LinkList {
 }
 
 export default LinkList
-```

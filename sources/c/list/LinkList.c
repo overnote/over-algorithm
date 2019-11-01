@@ -296,4 +296,3 @@ void LinkListDestroy(LinkList *L) {
     }
     L = NULL;
 }
-

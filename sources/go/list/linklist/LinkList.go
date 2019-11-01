@@ -1,6 +1,3 @@
-## 单链表的Go实现
-
-```go
 /*
  *  单链表
  */
@@ -240,4 +237,3 @@ func (l *LinkList) Clear() {
 	l.first = nil
 	l.length = 0
 }
-```
