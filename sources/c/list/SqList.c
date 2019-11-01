@@ -148,14 +148,13 @@ Status SqListUpdate(SqList *L, int index, ElemType e) {
 }
 
 // 查询  按照位序查询值
-ElemType SqListGetElem(SqList *L, int index) {
-
+Status SqListGetElem(SqList *L, int index, ElemType *e) {
     if (index < 1 || index > L->length) {
         printf("位序不合法\n");
-        exit(ERROR);
+        return ERROR;
     }
-
-    return L->arr[index - 1];
+    *e = L->arr[index - 1];
+    return OK;
 }
 
 // 查询  按照值查询位序
@@ -164,10 +163,10 @@ Status SqListLocateElem(SqList *L,  ElemType e, int *index) {
     for (i = 0; i < L->length; i++) {
         if (L->arr[i] == e) {
             *index = i + 1;
-            return OK;
+            return TRUE;
         }
     }
-    return ERROR;
+    return FALSE;
 }
 
 // 查询前驱
