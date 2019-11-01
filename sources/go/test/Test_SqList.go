@@ -13,7 +13,7 @@ func TestSqList() {
 	l.Display()
 
 	fmt.Printf("增加元素-------------\n")
-	l.Insert(1, 17)
+	l.Append(17)
 	l.Insert(2, 18)
 	l.Insert(3, 19)
 	fmt.Printf("长度 %d\n", l.Length())

@@ -4,7 +4,7 @@
 class SqList {
     constructor(){              // 构造函数 相当于C中的 init，Go找那个的new
         this.length = 0;
-        this.elem = [];
+        this.arr = [];
     }
     len(){                   // 获取长度
         return this.length;
@@ -14,14 +14,18 @@ class SqList {
             console.log("为空表");
         } else {
             for (let i = 0 ; i < this.length; i++) {
-                console.log("元素[" + (i+1) + "] = " + this.elem[i]);
+                console.log("元素[" + (i+1) + "] = " + this.arr[i]);
             }
         }
+    }
+    append(e){
+        this.arr[this.len] = e
+        this.len++
     }
     insert(index, e){        // 插入元素    
         // 如果是空表
         if (this.length == 0 && index == 1) {
-            this.elem[0] = e;
+            this.arr[0] = e;
             this.length++;
             return
         }
@@ -32,9 +36,9 @@ class SqList {
         }
         // 执行插入 从最后一位开始一次后移
         for (let i = this.length + 1; i > index; i--) {
-            this.elem[i - 1] = this.elem[i - 2];
+            this.arr[i - 1] = this.arr[i - 2];
         }
-        this.elem[index - 1] = e;
+        this.arr[index - 1] = e;
         this.length++;
     }
     delete(index){          // 删除元素
@@ -43,7 +47,7 @@ class SqList {
             return
         }
         for (let i = index - 1; i < this.length - 1; i++) {
-            this.elem[i] = this.elem[ i + 1 ];
+            this.arr[i] = this.arr[ i + 1 ];
         }
         this.length--
     }
@@ -52,19 +56,19 @@ class SqList {
             console.log("位序越界");
             return
         }
-        this.elem[index - 1] = e;
+        this.arr[index - 1] = e;
     }        
     getElem(index) {        // 根据位序查询
         if (index < 1 || index > this.length) {
             console.log("位序不合法");
             return
         }
-        return this.elem[index - 1]
+        return this.arr[index - 1]
     }
     locateElem(e) {     // 根据值查询
         let index = null;
         for (let i = 0; i < this.length; i++){
-            if (this.elem[i] == e) {
+            if (this.arr[i] == e) {
                 index = i + 1;
                 break;
             }
@@ -76,7 +80,7 @@ class SqList {
             console.log("顺序表元素不足，无法查询");
             return
         }
-        if (this.elem[0] == e) {
+        if (this.arr[0] == e) {
             console.log("第一个元素无前驱");
             return
         }
@@ -85,14 +89,14 @@ class SqList {
             console.log("未找到");
             return
         }
-        return this.elem[index - 2]
+        return this.arr[index - 2]
     }
     nextElem(e){        // 查询后继
         if (this.length <= 1) {
             console.log("数据结构为空，无法查询");
             return
         }
-        if (this.elem[this.length - 1] == e) {
+        if (this.arr[this.length - 1] == e) {
             console.log("最后一个元素无后继");
             return
         }
@@ -101,11 +105,11 @@ class SqList {
             console.log("未找到");
             return
         }
-        return this.elem[index]
+        return this.arr[index]
     } 
     clear() {       // 清空
         this.length = 0;
-        this.elem  = [];
+        this.arr  = [];
     }
 }
 
