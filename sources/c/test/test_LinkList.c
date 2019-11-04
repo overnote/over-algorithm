@@ -6,6 +6,7 @@ void test_LinkList() {
 
     struct LinkList L;
     LinkListInit(&L);
+    LinkListDisplay(&L);
 
     printf("追加元素-------------\n");
     LinkListAppend(&L, 17);
@@ -17,31 +18,41 @@ void test_LinkList() {
     LinkListInsert(&L, 3, 19);
     LinkListDisplay(&L);
 
+    printf("删除元素-------------\n");
+    LinkListDelete(&L, 1);
+    LinkListDisplay(&L);
+
     printf("修改元素-------------\n");
     LinkListUpdate(&L, 2, 22);
     LinkListDisplay(&L);
 
-    printf("查找元素-------------\n");
-    int te;
+    printf("索引查找值-------------\n");
+    int ge;
+    LinkListGetElem(&L, 3, &ge);
+    printf("索引值：%d\n", ge);
+
+    printf("值查找索引-------------\n");
+    int le;
+    LinkListLocateElem(&L, 20, &le);
+    printf("索引值：%d\n", le);
+
+    printf("查找前驱---------------\n");
     int pe;
+    LinkListPriorElem(&L, 17, &pe);
+    printf("元素前驱：%d\n", pe);
+
+    printf("查找后继---------------\n");
     int ne;
-    LinkListLocateElem(&L, 19, &te);
-    LinkListPriorElem(&L, 22, &pe);
-    LinkListNextElem(&L, 22, &ne);
-    printf("查找第三个元素位置：%d\n", te);
-    printf("查找第二个元素前驱：%d\n", pe);
-    printf("查找第二个元素后继：%d\n", ne);
-    
-    printf("删除元素-------------\n");
-    LinkListDelete(&L, 2);
-    LinkListDisplay(&L);
+    int r = LinkListNextElem(&L, 22, &ne);
+    printf("元素后继：%d\n", ne);
+    printf("查找结果：%d,\n", r);
 
     printf("清空表---------------\n");
     LinkListClear(&L);
-    LinkListDisplay(&L);
+    // LinkListDisplay(&L);
 
-    printf("删除表---------------\n");
-    LinkListDestroy(&L);
+    // printf("删除表---------------\n");
+    // LinkListDestroy(&L);
 
     printf("********** 顺序表测试结束 **********\n");
     

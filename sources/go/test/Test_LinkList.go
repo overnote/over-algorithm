@@ -21,17 +21,29 @@ func TestLinkList() {
 	l.Insert(3, 19)
 	l.Display()
 
-	fmt.Println("修改元素-------------")
-	l.Update(2, 22)
+	fmt.Println("删除元素-------------")
+	l.Delete(1)
 	l.Display()
 
-	fmt.Println("查找元素-------------")
-	te, _ := l.LocateElem(19)
-	pe, _ := l.PriorElem(22)
-	ne, _ := l.NextElem(22)
-	fmt.Printf("查找第三个元素位置：%d\n", te)
-	fmt.Printf("查找第二个元素前驱：%d\n", pe)
-	fmt.Printf("查找第二个元素后继：%d\n", ne)
+	fmt.Println("修改元素-------------")
+	l.Update(3, 22)
+	l.Display()
+
+	fmt.Println("按照位序查找元素-------------")
+	ge, _ := l.GetElem(2)
+	fmt.Printf("查找元素值：%d\n", ge)
+
+	fmt.Println("按照值查找位序-------------")
+	le, _ := l.LocateElem(18)
+	fmt.Printf("查找元素位序：%d\n", le)
+
+	fmt.Println("查找元素前驱-------------")
+	pe, _ := l.PriorElem(24)
+	fmt.Printf("查找元素前驱：%d\n", pe)
+
+	fmt.Println("查找元素后继-------------")
+	ne, _ := l.NextElem(18)
+	fmt.Printf("查找元素前驱：%d\n", ne)
 
 	fmt.Println("删除元素-------------")
 	l.Delete(2)
