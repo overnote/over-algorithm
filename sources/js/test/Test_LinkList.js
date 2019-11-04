@@ -9,9 +9,12 @@ function TestLinkList(){
 
     console.log("增加元素-------------");
     l.append(17)
-    l.insert(1, 18)
-    console.log(l);
-    l.insert(2, 19)
+    l.append(20)
+    l.display()
+
+    console.log("插入元素-------------");
+    l.insert(2, 18)
+    l.insert(3, 19)
     l.display()
 
     console.log("修改元素-------------");

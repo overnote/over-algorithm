@@ -9,11 +9,12 @@ void test_LinkList() {
 
     printf("追加元素-------------\n");
     LinkListAppend(&L, 17);
-    LinkListAppend(&L, 19);
+    LinkListAppend(&L, 20);
     LinkListDisplay(&L);
 
     printf("插入元素-------------\n");
     LinkListInsert(&L, 2, 18);
+    LinkListInsert(&L, 3, 19);
     LinkListDisplay(&L);
 
     printf("修改元素-------------\n");

@@ -57,17 +57,10 @@ class LinkList {
         // 构造要插入的节点
         let insertNode = new Node();
         insertNode.data = e;
-        // 如果在第一个结点插入
-        if (index == 1) {
-            insertNode.next = this.first;
-            this.first = insertNode;
-            this.len++;
-            return
-        }
 
-        // 其他插入：找到插入位置的前一个节点
-        let currentNode = this.first;
-        for (let i = 1; i <= index - 1; i++) {
+        // 插入：找到插入位置的前一个节点
+        let currentNode = this.first;// 此处等于已经循环了一次，所以是 - 2
+        for (let i = 1; i <= index - 2; i++) {
             currentNode = currentNode.next;
         }
         insertNode.next = currentNode.next;
@@ -80,8 +73,8 @@ class LinkList {
             return
         }
         // 找到要删除元素的前一个元素
-        let currentNode = this.first;
-        for (let i = 1; i <= index - 1; i++) {
+        let currentNode = this.first;// 此处等于已经循环了一次，所以是 - 2
+        for (let i = 1; i <= index - 2; i++) {
             currentNode = currentNode.next;
         }
         // 如果要删除的是最后一个元素

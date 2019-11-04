@@ -113,24 +113,14 @@ Status LinkListInsert(LinkList *L, int index, ElemType e){
         return FALSE;
     }
     insertNode->data = e;
-
-    // 如果在第一个结点插入
-    if (index == 1) {
-        insertNode->next = L->first;
-        L->first = insertNode;
-        L->length++;
-        return TRUE;
-    }
     
-    // 追加：找到插入位置的前一个节点
+    // 插入：找到插入位置的前一个节点
     int i;
-    struct LinkNode *currentNode = L->first;
-    for (i = 1; i <= index - 1; i++) {
-        if (i == index) {
-            break;
-        }
+    struct LinkNode *currentNode = L->first;    // 在该步骤其实已经做了循环中的一步，所以下面 -2
+    for (i = 1; i <= index - 2; i++) {         
         currentNode = currentNode->next;
     }
+
     insertNode->next = currentNode->next;
     currentNode->next =insertNode;
     L->length++;
@@ -148,8 +138,8 @@ Status LinkListDelete(LinkList *L, int index){
 
     // 删除 找到要删除元素的前一个元素
     int i;
-    struct LinkNode *currentNode = L->first;
-    for (i = 1; i <= index - 1; i++){
+    struct LinkNode *currentNode = L->first;     // 在该步骤其实已经做了循环中的一步，所以下面 -2
+    for (i = 1; i <= index - 2; i++){
         currentNode = currentNode->next;
     }
     if(index == L->length){           // 如果删除的是最后一个元素
