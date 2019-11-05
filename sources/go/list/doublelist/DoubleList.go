@@ -1,6 +1,3 @@
-## 双向循环链表Go实现
-
-```go
 /*
  *  双向循环链表
  */
@@ -298,4 +295,3 @@ func (l *DoubleList) Clear() {
 	l.first = nil
 	l.length = 0
 }
-```

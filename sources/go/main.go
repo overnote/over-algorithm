@@ -6,5 +6,6 @@ import (
 
 func main() {
 	//test.TestSqList()		// 测试顺序表
-	test.TestLinkList() // 测试单链表
+	// test.TestLinkList()   // 测试单链表
+	test.TestDoubleList() // 测试双向循环链表
 }

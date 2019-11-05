@@ -64,12 +64,6 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 - [《算法竞赛进阶指南》李煜东](https://book.douban.com/subject/30136932/)：适合竞赛训练
 - [《算法竞赛入门经典》刘汝佳·第2版](https://book.douban.com/subject/25902102/)：适合竞赛训练
 
-考研方向：
-- [《数据结构》严蔚敏](https://book.douban.com/subject/24699581/)：绝大多数的指定教材，结构严谨，但是没有代码实现
-- [《数据结构算法解析（第2版）》](https://book.douban.com/subject/26823999/)：严版数据结构的实现
-- [《算法笔记》](https://book.douban.com/subject/26827295/)：适合考研复习、PAT考试
-- [《算法笔记上机训练实战指南》](https://book.douban.com/subject/30162908/)：算法笔记配套练习册
-
 ## 算法资料
 
 网站：

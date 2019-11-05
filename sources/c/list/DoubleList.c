@@ -1,6 +1,3 @@
-## 双向循环链表C实现
-
-```c
 #ifndef _COMMON_
 #define _COMMON_
 #include <stdio.h>
@@ -340,4 +337,3 @@ void DoubleListDestroy(DoubleList *L) {
     }
     L = NULL;
 }
-```

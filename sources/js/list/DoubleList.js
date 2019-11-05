@@ -1,6 +1,3 @@
-## 双向循环链表JS实现
-
-```js
 /**
  * 单链表
  */
@@ -244,4 +241,3 @@ class DoubleList {
 }
 
 export default DoubleList
-```
