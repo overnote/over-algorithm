@@ -31,7 +31,7 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 
 ### 1.1 入门书籍
 
-- [《大话数据结构》](https://book.douban.com/subject/6424904/)：适合完全0基础读者了解数据结构，了解即可，因为内部有些许错误
+- [《大话数据结构》](https://book.douban.com/subject/6424904/)：适合0基础时了解数据结构
 - [《漫画算法》](https://book.douban.com/subject/33420587/)：全彩配图，有趣的基础入门书
 - [《算法图解》](https://book.douban.com/subject/26979890/)：适合算法基础薄弱时入门算法
 
@@ -52,27 +52,19 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 - [《算法导论》](https://book.douban.com/subject/1885170/)：算法领域的代表作
 - [《计算机程序设计艺术》](https://book.douban.com/subject/1130500/)：恢弘巨作，算法领域的里程碑
 
-### 1.5 算法习题
+### 1.5 面试方向
 
-面试方向：
 - [《编程珠玑》](https://book.douban.com/subject/3227098/)：为算法提供了精辟的解题思路，是算法思想学习的瑰宝
 - [《编程之美》](https://book.douban.com/subject/3004255/)：微软面试指南集合
 - [《程序员代码面试指南》](https://book.douban.com/subject/26638586/)：面试指南之一
 - [《剑指offer》](https://book.douban.com/subject/27008702/)：面试指南之一
 
-竞赛方向：
-- [《算法竞赛进阶指南》李煜东](https://book.douban.com/subject/30136932/)：适合竞赛训练
-- [《算法竞赛入门经典》刘汝佳·第2版](https://book.douban.com/subject/25902102/)：适合竞赛训练
-
 ## 算法资料
 
-网站：
 - [力扣](https://leetcode.com/)：著名的算法题网站
 - [牛客网](https://www.nowcoder.com/)：面向基础与面试的算法题库
-
-视频：
-- [浙江大学-陈越姥姥-数据结构](https://www.icourse163.org/course/ZJU-93001)
-- [清华大学-邓俊辉-数据结构与算法](https://www.bilibili.com/video/av49361421)
+- [浙江大学-陈越姥姥-数据结构](https://www.icourse163.org/course/ZJU-93001)：经典数据结构视频
+- [清华大学-邓俊辉-数据结构与算法](https://www.bilibili.com/video/av49361421)：经典数据结构与算法视频
 
 ## 附录：笔记汇总
 
