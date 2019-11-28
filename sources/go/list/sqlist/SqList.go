@@ -1,5 +1,5 @@
 /**
- *  顺序表
+ *  顺序表：Go拥有切片数据结构，可简单视为动态数组，可以隐藏数组元素移动的底层细节
  */
 
 package sqlist
@@ -18,7 +18,7 @@ type ElemeType int // 给 int起个别名
 type SqList struct {
 	size   int         // 该线性表最大容量
 	length int         // 该线性表最大长度
-	arr    []ElemeType // 线性表内数据
+	arr    []ElemeType // 线性表内数据，在Go中是一个切片
 }
 
 // 构造实例
@@ -26,7 +26,7 @@ func NewSqList() *SqList {
 	return &SqList{
 		size:   ListMaxSize,
 		length: 0,
-		arr:    make([]ElemeType, ListMaxSize),
+		arr:    nil,
 	}
 }
 
@@ -53,6 +53,7 @@ func (l *SqList) Display() {
 
 // 追加元素：在末尾追加元素
 func (l *SqList) Append(e ElemeType) {
+
 	if l.length == l.size {
 
 		fmt.Println("数据结构已满，申请新空间")
