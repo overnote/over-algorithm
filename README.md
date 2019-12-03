@@ -81,10 +81,9 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 
 **OverNote分类**：  
 - [Go](https://github.com/overnote/over-golang)：详尽的Go领域笔记：Go语法、Go并发编程、GoWeb编程、Go微服务等
-- [大前端](https://github.com/overnote/over-front-end)：包含JavaScript、Node.js、vue/react、微信开发、Flutter等大前端技术
-- [数据结构与算法](https://github.com/overnote/over-algorithm)：以C/Go实现为主记录数据结构与算法的笔记
-- [分布式与微服务架构](https://github.com/overnote/over-architecture/)：分布式与微服务等架构相关笔记
+- [大前端](https://github.com/overnote/over-javascript)：包含JavaScript、Node.js、vue/react、微信开发、Flutter等大前端技术
+- [数据结构与算法](https://github.com/overnote/over-algorithm)：以Go实现的数据结构与算法的笔记，附C，JavaScript版本
+- [分布式与微服务架构](https://github.com/overnote/over-server)：分布式与微服务等架构笔记，附mysql、redis、nginx、k8s等服务端常用软件使用笔记
 - [Linux](https://github.com/overnote/over-linux)：计算机组成原理、操作系统、计算机网络、编译原理基础学科笔记
-- [服务端常用技术](https://github.com/overnote/over-server)：nginx、mysql、redis、mongodb、linux系统基础等服务端常用技术汇总笔记
 - [大数据](https://github.com/overnote/over-bigdata)：大数据笔记，完善中
 - [Python](https://github.com/overnote/over-python)：Python相关笔记，完善中

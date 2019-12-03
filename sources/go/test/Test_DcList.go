@@ -2,13 +2,13 @@ package test
 
 import (
 	"fmt"
-	"structure/list/linklist"
+	dc "structure/list/dclist"
 )
 
-func TestLinkList() {
+func TestDcList() {
 
 	fmt.Println("*********** 测试开始 ***********")
-	l := linklist.NewLinkList()
+	l := dc.NewDcList()
 
 	fmt.Println("----------- 追加元素 -----------")
 	l.Append(7)
@@ -31,7 +31,7 @@ func TestLinkList() {
 	l.Display()
 
 	fmt.Println("----------- 查找元素 -----------")
-	ge, _ := l.GetElem(2)
+	ge, _ := l.GetElem(22)
 	le, _ := l.Locate(22)
 	fmt.Printf("按位序查找值：%d\n", ge)
 	fmt.Printf("按值查找位序：%d\n", le)
@@ -41,8 +41,8 @@ func TestLinkList() {
 	fmt.Printf("元素前驱：%d\n", pe)
 
 	fmt.Println("----------- 查找后继 -----------")
-	ne, _ := l.NextElem(2)
-	fmt.Printf("元素前驱：%d\n", ne)
+	ne, _ := l.NextElem(22)
+	fmt.Printf("元素后继：%d\n", ne)
 
 	fmt.Println("*********** 测试结束 ***********")
 

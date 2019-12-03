@@ -7,31 +7,34 @@ import (
 
 func TestSqList() {
 
-	fmt.Printf("********** 顺序表测试开始 **********\n")
+	fmt.Println("*********** 测试开始 ***********")
+	l := sqlist.NewSqList(3, 2)
 
-	l := sqlist.NewSqList()
+	fmt.Println("----------- 增加元素 -----------")
+	l.Append(6)
+	l.Insert(1, 7)
+	l.Insert(3, 4)
+	l.Insert(4, 9)
 	l.Display()
 
-	fmt.Printf("增加元素-------------\n")
-	l.Append(17)
-	l.Insert(2, 18)
-	l.Insert(3, 19)
-	fmt.Printf("长度 %d\n", l.Length())
+	fmt.Println("----------- 删除元素 -----------")
+	l.Delete(4)
 	l.Display()
 
-	fmt.Printf("修改元素-------------\n")
-	l.Update(2, 22)
+	fmt.Println("----------- 修改元素 -----------")
+	l.Update(3, 22)
 	l.Display()
 
-	pe, _ := l.PriorElem(22)
-	ne, _ := l.NextElem(22)
-	fmt.Printf("查找第二个元素前驱：%d\n", pe)
-	fmt.Printf("查找第二个元素后继：%d\n", ne)
+	fmt.Println("----------- 查询元素 -----------")
+	e, _ := l.GetElem(3)
+	i, _ := l.Locate(22)
+	fmt.Println("查询索引值：", e)
+	fmt.Println("查询值索引：", i)
+	pe, _ := l.PrevElem(6)
+	ne, _ := l.NextElem(6)
+	fmt.Printf("查找前驱：%d\n", pe)
+	fmt.Printf("查找后继：%d\n", ne)
 
-	fmt.Printf("删除元素-------------\n")
-	l.Delete(2)
-	l.Display()
-
-	fmt.Printf("********** 顺序表测试结束 **********\n")
+	fmt.Println("*********** 测试结束 ***********")
 
 }
