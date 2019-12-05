@@ -1,20 +1,34 @@
 package main
 
-import (
-	"structure/test"
-)
+import "structure/testStruct"
 
 func main() {
 
-	// 测试顺序表
-	// test.TestSqList() 
+	// 测试链式队列
+	testStruct.TestLinkQueue()
 
-	// 测试单链表
-	// test.TestLinkList()  
-	
+	// 测试循环队列
+	//testStruct.TestCirQueue()
+
+	// 测试链栈
+	//testStruct.TestLinkStack()
+
+	// 测试共享栈e
+	//testStruct.TestShStack()
+
+	// 测试顺序栈
+	//testStruct.TestSqStack()
+
 	// 测试双向循环链表
-	test.TestDcList() 
+	//testStruct.TestDcList()
 
 	// 测试静态链表
-	// test.TestStaticList()
+	//testStruct.TestStaticList()
+
+	// 测试单链表
+	// testStruct.TestLinkList()
+
+	// 测试顺序表
+	// testStruct.TestSqList()
+
 }

@@ -1,0 +1,85 @@
+/*
+	链式存储队列
+ */
+
+package linkqueue
+
+import (
+	"errors"
+	"fmt"
+)
+
+type node struct {
+	data   	interface{}
+	next 	*node
+}
+
+type LinkQueue struct {
+	length	int
+	front	*node
+	rear    *node
+}
+
+func NewLinkQueue() *LinkQueue{
+	return &LinkQueue{
+		length: 0,
+		front:  nil,
+		rear:   nil,
+	}
+}
+
+func (q *LinkQueue)Display() {
+	if q.length == 0 {
+		fmt.Println("队列为空")
+		return
+	}
+	currentNode := q.front
+	fmt.Printf("队列元素：")
+	for i := 1; i < q.length; i++ {
+		fmt.Printf("%d ", currentNode.data)
+		currentNode = currentNode.next
+	}
+	fmt.Println()
+}
+
+func (q *LinkQueue)EnQueue(e interface{}) {
+
+	enNode := &node{
+		data: e,
+		next: nil,
+	}
+
+	// 笔者使用无头节点方式，需要额外判断是否是第一次插入
+	if q.length == 0 {
+		q.front = enNode
+		q.rear = enNode
+		q.length++
+		return
+	}
+
+	// 把新结点赋值给原队尾结点的后继
+	q.rear.next = enNode
+	q.rear = enNode
+	q.length++
+}
+
+func (q *LinkQueue)DeQueue() (interface{}, error){
+	if q.front == q.rear {
+		fmt.Println("空队列")
+		return nil, errors.New("队列为空")
+	}
+	// 笔者这里使用的是无头节点方式，直接进行出队操作
+	temp := q.front
+	e := temp.data
+	q.front = q.front.next
+	// 若队头是队尾，则出队后将rear指向头节点
+	if q.rear == temp {
+		q.rear = q.front
+	}
+	q.length--
+	return e, nil
+}
+
+func (q *LinkQueue)Length() int {
+	return q.length
+}
