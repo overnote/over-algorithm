@@ -4,8 +4,14 @@ import "structure/testStruct"
 
 func main() {
 
+	// 测试二叉线索树
+	testStruct.TestThTree()
+
+	// 测试二叉树
+	//testStruct.TestBiTree()
+
 	// 测试链式队列
-	testStruct.TestLinkQueue()
+	//testStruct.TestLinkQueue()
 
 	// 测试循环队列
 	//testStruct.TestCirQueue()
@@ -26,7 +32,7 @@ func main() {
 	//testStruct.TestStaticList()
 
 	// 测试单链表
-	// testStruct.TestLinkList()
+	//testStruct.TestLinkList()
 
 	// 测试顺序表
 	// testStruct.TestSqList()

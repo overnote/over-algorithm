@@ -44,10 +44,10 @@ func (l *LinkList) Display() {
 	fmt.Printf("数据元素显示：")
 	currentnode := l.head
 	for currentnode.next != nil {
-		fmt.Printf("%d ", currentnode.data)
+		fmt.Printf("%v ", currentnode.data)
 		currentnode = currentnode.next	
 	}
-	fmt.Printf("%d ", currentnode.data)
+	fmt.Printf("%v ", currentnode.data)
 	fmt.Println("")
 
 }

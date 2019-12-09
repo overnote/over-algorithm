@@ -33,16 +33,16 @@ func TestDcList() {
 	fmt.Println("----------- 查找元素 -----------")
 	ge, _ := l.GetElem(22)
 	le, _ := l.Locate(22)
-	fmt.Printf("按位序查找值：%d\n", ge)
-	fmt.Printf("按值查找位序：%d\n", le)
+	fmt.Printf("按位序查找值：%v\n", ge)
+	fmt.Printf("按值查找位序：%v\n", le)
 
 	fmt.Println("----------- 查找前驱 -----------")
 	pe, _ := l.PrevElem(22)
-	fmt.Printf("元素前驱：%d\n", pe)
+	fmt.Printf("元素前驱：%v\n", pe)
 
 	fmt.Println("----------- 查找后继 -----------")
 	ne, _ := l.NextElem(22)
-	fmt.Printf("元素后继：%d\n", ne)
+	fmt.Printf("元素后继：%v\n", ne)
 
 	fmt.Println("*********** 测试结束 ***********")
 

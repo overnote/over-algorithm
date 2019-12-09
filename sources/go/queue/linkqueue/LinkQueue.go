@@ -36,7 +36,7 @@ func (q *LinkQueue)Display() {
 	currentNode := q.front
 	fmt.Printf("队列元素：")
 	for i := 1; i < q.length; i++ {
-		fmt.Printf("%d ", currentNode.data)
+		fmt.Printf("%v ", currentNode.data)
 		currentNode = currentNode.next
 	}
 	fmt.Println()

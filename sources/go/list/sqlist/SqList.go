@@ -42,7 +42,7 @@ func (l *SqList) Size() int {
 // 打印线性表
 func (l *SqList) Display() {
 
-	fmt.Printf("数据结构长度：%d，容量：%d\n", l.length, l.size)
+	fmt.Printf("数据结构长度：%v，容量：%v\n", l.length, l.size)
 
 	if l.length == 0 {
 		return
@@ -50,7 +50,7 @@ func (l *SqList) Display() {
 
 	fmt.Printf("数据元素显示：")
 	for i := 0; i <= l.length - 1; i++ {
-		fmt.Printf("%d ", l.arr[i])
+		fmt.Printf("%v ", l.arr[i])
 	}
 	fmt.Println("")
 }

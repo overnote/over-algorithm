@@ -51,7 +51,7 @@ func NewStaticList(size int) *StaticList {
 // 打印线性表
 func (l *StaticList) Display() {
  
-	fmt.Printf("数据结构长度：%d，容量：%d\n", l.length, l.size)
+	fmt.Printf("数据结构长度：%v，容量：%v\n", l.length, l.size)
  
 	if l.length == 0 {
 		 return
@@ -59,7 +59,7 @@ func (l *StaticList) Display() {
  
 	fmt.Printf("数据元素显示：")
 	for i := 1; i <= l.length; i++ {
-		fmt.Printf("%d ", l.arr[i].data)
+		fmt.Printf("%v ", l.arr[i].data)
 	}
 	fmt.Println("")
 }

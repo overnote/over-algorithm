@@ -32,8 +32,8 @@ func TestSqList() {
 	fmt.Println("查询值索引：", i)
 	pe, _ := l.PrevElem(6)
 	ne, _ := l.NextElem(6)
-	fmt.Printf("查找前驱：%d\n", pe)
-	fmt.Printf("查找后继：%d\n", ne)
+	fmt.Printf("查找前驱：%v\n", pe)
+	fmt.Printf("查找后继：%v\n", ne)
 
 	fmt.Println("*********** 测试结束 ***********")
 

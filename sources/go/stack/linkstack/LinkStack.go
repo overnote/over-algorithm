@@ -39,7 +39,7 @@ func (s *LinkStack)Display() {
 	fmt.Printf("栈数据：")
 	currentNode := s.top
 	for i := 1; i <= s.length; i++ {
-		fmt.Printf("%d ", currentNode.data)
+		fmt.Printf("%v ", currentNode.data)
 		currentNode = currentNode.next
 	}
 	fmt.Println()

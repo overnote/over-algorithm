@@ -45,10 +45,10 @@ func (l *DcList) Display() {
 	fmt.Printf("显示表：")
 	currentNode := l.head
 	for currentNode.next != l.head {
-		fmt.Printf("%d ", currentNode.data)
+		fmt.Printf("%v ", currentNode.data)
 		currentNode = currentNode.next
 	}
-	fmt.Printf("%d ", currentNode.data)
+	fmt.Printf("%v ", currentNode.data)
 	fmt.Println()
 }
 
