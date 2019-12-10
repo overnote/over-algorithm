@@ -1,11 +1,9 @@
 package main
 
-import "structure/testStruct"
-
 func main() {
 
 	// 测试二叉线索树
-	testStruct.TestThTree()
+	//testStruct.TestThTree()
 
 	// 测试二叉树
 	//testStruct.TestBiTree()
@@ -36,5 +34,8 @@ func main() {
 
 	// 测试顺序表
 	// testStruct.TestSqList()
+
+	// 测试稀疏数组
+	//testStruct.TestSparseArray()
 
 }
