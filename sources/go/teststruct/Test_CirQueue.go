@@ -1,14 +1,14 @@
-package testStruct
+package teststruct
 
 import (
 	"fmt"
-	"structure/queue/linkqueue"
+	"structure/queue/cirqueue"
 )
 
-func TestLinkQueue() {
+func TestCirQueue() {
 
 	fmt.Println("*********** 测试开始 ***********")
-	q := linkqueue.NewLinkQueue()
+	q := cirqueue.NewCirQueue(5)
 
 	fmt.Println("----------- 元素入队 -----------")
 	q.EnQueue(0)

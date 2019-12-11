@@ -1,41 +1,49 @@
 package main
 
+import "structure/teststruct"
+
 func main() {
 
+	// 测试邻接表
+	teststruct.TestLGraph()
+
+	// 测试邻接矩阵
+	//teststruct.TestMGraph()
+
 	// 测试二叉线索树
-	//testStruct.TestThTree()
+	//teststruct.TestThTree()
 
 	// 测试二叉树
-	//testStruct.TestBiTree()
+	//teststruct.TestBiTree()
 
 	// 测试链式队列
-	//testStruct.TestLinkQueue()
+	//teststruct.TestLinkQueue()
 
 	// 测试循环队列
-	//testStruct.TestCirQueue()
+	//teststruct.TestCirQueue()
 
 	// 测试链栈
-	//testStruct.TestLinkStack()
+	//teststruct.TestLinkStack()
 
 	// 测试共享栈e
-	//testStruct.TestShStack()
+	//teststruct.TestShStack()
 
 	// 测试顺序栈
-	//testStruct.TestSqStack()
+	//teststruct.TestSqStack()
 
 	// 测试双向循环链表
-	//testStruct.TestDcList()
+	//teststruct.TestDcList()
 
 	// 测试静态链表
-	//testStruct.TestStaticList()
+	//teststruct.TestStaticList()
 
 	// 测试单链表
-	//testStruct.TestLinkList()
+	//teststruct.TestLinkList()
 
 	// 测试顺序表
-	// testStruct.TestSqList()
+	// teststruct.TestSqList()
 
 	// 测试稀疏数组
-	//testStruct.TestSparseArray()
+	//teststruct.TestSparseArray()
 
 }

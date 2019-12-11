@@ -1,18 +1,17 @@
-package testStruct
+package teststruct
 
 import (
 	"fmt"
-	"structure/stack/linkstack"
+	"structure/stack/sqstack"
 )
 
-func TestLinkStack() {
+func TestSqStack() {
 
 	fmt.Println("*********** 测试开始 ***********")
-	s := linkstack.NewLinkStack()
+	s := sqstack.NewSqStack(5)
 
 	fmt.Println("----------- 元素进栈 -----------")
 	s.Push(7)
-	s.Push(3)
 	s.Push(4)
 	s.Display()
 

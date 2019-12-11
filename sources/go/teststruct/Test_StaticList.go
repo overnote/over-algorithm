@@ -1,4 +1,4 @@
-package testStruct
+package teststruct
 
 import (
 	"fmt"
