@@ -9,7 +9,7 @@ func TestMGraph() {
 
 	fmt.Println("*********** 测试开始 ***********")
 
-	adjgraph.NewMGraph(4,6)
+	adjgraph.NewMGraphNoDirect(4,6)
 
 	fmt.Println("*********** 测试结束 ***********")
 

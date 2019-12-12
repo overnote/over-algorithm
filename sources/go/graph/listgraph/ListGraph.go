@@ -1,6 +1,9 @@
 package listgraph
 
-import "fmt"
+import (
+	"fmt"
+	"structure/queue/cirqueue"
+)
 
 // 顶点
 type vertex struct {
@@ -23,7 +26,7 @@ type Graph struct {
 }
 
 // 创建无向网图
-func NewLGraph(numVertexes int, numEdges int) *Graph{
+func NewLGraphNoDirect(numVertexes int, numEdges int) *Graph{
 
 	// 记录顶点数和边数
 	g := &Graph{
@@ -46,8 +49,8 @@ func NewLGraph(numVertexes int, numEdges int) *Graph{
 	for k := 0; k < numEdges; k++ {
 
 		var w int
-		fmt.Println("输入当前边的权")
-		fmt.Scanf("%d", &w)
+		//fmt.Println("输入当前边的权")		// 需要加权则打开这两行代码
+		//fmt.Scanf("%d", &w)
 
 		fmt.Printf("输入第 %d 条边的两个顶点序号：\n", k + 1)
 		var i,j int
@@ -88,4 +91,96 @@ func (g *Graph)Display(){
 		fmt.Println(g.vexs[currentNode.adjvex].data)
 	}
 
+}
+
+// 深度优先遍历
+func (g *Graph)DFSTraverse() {
+
+	// 设置一个数组，记录所有顶点的访问状态
+	visited := make([]bool, g.numVertexes)
+	for k, _ := range visited {
+		visited[k] = false		// 所有顶点都未被访问
+	}
+
+	// 对所有未访问的顶点调用 深度优先算法 dfs。如果是连通图，只会执行一次
+	for i := 0; i < g.numVertexes; i++{
+		if !visited[i] {
+			fmt.Printf("本次遍历顶点：")
+			g.dfs(visited, i)			// 调用深度优先算法
+			fmt.Println()
+		}
+	}
+
+}
+
+// 深度优先算法
+func (g *Graph)dfs(visited []bool, i int){
+
+	fmt.Printf("%v ", g.vexs[i].data)
+	visited[i] = true	// 该顶点遍历完毕
+
+	currentNode := g.vexs[i].head
+	for currentNode.next != nil {
+		// 对未访问的邻接点进行递归调用
+		if !visited[currentNode.adjvex] {
+			g.dfs(visited, currentNode.adjvex)
+		}
+		currentNode = currentNode.next
+	}
+}
+
+// 广度优先搜索
+func (g *Graph)BFSTraverse() {
+
+	// 设置一个数组，记录所有顶点的访问状态
+	visited := make([]bool, g.numVertexes)
+	for k, _ := range visited {
+		visited[k] = false		// 所有顶点都未被访问
+	}
+
+	queue := cirqueue.NewCirQueue(50)
+
+	for i := 0; i < g.numVertexes; i++ {
+
+		if !visited[i] {
+
+			visited[i] = true							// 当前遍历到了该节点
+
+			fmt.Printf("%v ", g.vexs[i].data)	// 打印遍历到的顶点
+			err := queue.EnQueue(i)
+			if err != nil {
+				fmt.Println("入队发生错误：", err)
+				return
+			}
+
+			for queue.Length() != 0{
+
+				k, err := queue.DeQueue()
+				if err != nil {
+					fmt.Println("出队发生错误：", err)
+					return
+				}
+
+				currentNode := g.vexs[k.(int)].head
+				for currentNode != nil {
+
+					if !visited[currentNode.adjvex] {
+						visited[currentNode.adjvex] = true
+						fmt.Printf("%v ", g.vexs[currentNode.adjvex].data)
+						err = queue.EnQueue(currentNode.adjvex)
+						if err != nil {
+							fmt.Println("入队发生错误：", err)
+							return
+						}
+					}
+					currentNode = currentNode.next
+
+				}
+			}
+
+		}
+
+	}
+
+	fmt.Println()
 }
