@@ -149,3 +149,9 @@ func (g *Graph)BFSTraverse() {
 
 	fmt.Println()
 }
+
+// Prim算法最小生成树
+func (g *Graph)MiniSpanTreePrim() {
+
+
+}
