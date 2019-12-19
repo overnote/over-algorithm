@@ -1,49 +1,52 @@
 package main
 
-import "structure/teststruct"
+import "structure/ztest/tree"
 
 func main() {
 
+	// 测试二叉搜索树
+	tree.TestBSTree()
+
 	// 测试邻接表
-	teststruct.TestLGraph()
+	//graph.TestLGraph()
 
 	// 测试邻接矩阵
-	//teststruct.TestMGraph()
+	//ztest.TestMGraph()
 
 	// 测试二叉线索树
-	//teststruct.TestThTree()
+	//ztest.TestThreadTree()
 
 	// 测试二叉树
-	//teststruct.TestBiTree()
+	//ztest.TestBinaryTree()
 
 	// 测试链式队列
-	//teststruct.TestLinkQueue()
+	//ztest.TestLinkQueue()
 
 	// 测试循环队列
-	//teststruct.TestCirQueue()
+	//ztest.TestCirQueue()
 
 	// 测试链栈
-	//teststruct.TestLinkStack()
+	//ztest.TestLinkStack()
 
 	// 测试共享栈e
-	//teststruct.TestShStack()
+	//ztest.TestShStack()
 
 	// 测试顺序栈
-	//teststruct.TestSqStack()
+	//ztest.TestSqStack()
 
 	// 测试双向循环链表
-	//teststruct.TestDcList()
+	//ztest.TestDcList()
 
 	// 测试静态链表
-	//teststruct.TestStaticList()
+	//ztest.TestStaticList()
 
 	// 测试单链表
-	//teststruct.TestLinkList()
+	//ztest.TestLinkList()
 
 	// 测试顺序表
-	// teststruct.TestSqList()
+	// ztest.TestSqList()
 
 	// 测试稀疏数组
-	//teststruct.TestSparseArray()
+	//ztest.TestSparseArray()
 
 }

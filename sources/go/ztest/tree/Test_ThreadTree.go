@@ -1,22 +1,25 @@
-package teststruct
+package tree
 
 import (
 	"fmt"
-	"structure/tree/bitree"
+	"structure/tree/threadtree"
 )
 
-func TestBiTree() {
+func TestThreadTree() {
 
 	fmt.Println("*********** 测试开始 ***********")
 
 	fmt.Println("请依次输入 A B D H # # I # # E J # # # C F # # G # # 构造一个完全二叉树")
-	t := bitree.NewBiTree()
+	t := threadtree.NewThreadTree()
 
 	fmt.Println("----------- 树长度 -----------")
 	fmt.Println(t.Length())
 
+	fmt.Println("----------- 线索化 -----------")
+	t.InOrderThread()
+
 	fmt.Println("----------- 树遍历 -----------")
-	t.PreOrderTraverse()
+	t.InOrderTraverse()
 
 	fmt.Println("*********** 测试结束 ***********")
 

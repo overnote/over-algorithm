@@ -4,7 +4,7 @@
 	笔者这里额外添加了length属性，引入的数据结构设计的复杂性，如果要简单实现插入节点，可以借鉴02节中的的排序算法
  */
 
-package bitree
+package binarytree
 
 import (
 	"fmt"
@@ -16,15 +16,15 @@ type node struct {
 	rchild	*node
 }
 
-type BiTree struct {
+type BinaryTree struct {
 	root	*node
 	length  int
 }
 
-func NewBiTree() *BiTree{
+func NewBiTree() *BinaryTree{
 	fmt.Println("注意：空节点使用 # 字符代替")
 	root := new(node)
-	t := &BiTree{
+	t := &BinaryTree{
 		root:   root,
 		length: 0,
 	}
@@ -33,7 +33,7 @@ func NewBiTree() *BiTree{
 }
 
 // 构造数据
-func (t *BiTree)createNode(n *node){
+func (t *BinaryTree)createNode(n *node){
 	var e string
 	fmt.Scanf("%v", &e)
 	n.data = e							// 给当前节点赋值
@@ -48,23 +48,23 @@ func (t *BiTree)createNode(n *node){
 }
 
 // 获取长度
-func (t *BiTree)Length() int{
+func (t *BinaryTree)Length() int{
 	return t.length
 }
 
 // 获取根节点数据
-func (t *BiTree)Root() interface{} {
+func (t *BinaryTree)Root() interface{} {
 	return t.root.data
 }
 
 // 前序遍历
-func (t *BiTree)PreOrderTraverse() {
+func (t *BinaryTree)PreOrderTraverse() {
 	t.preOrderRecursion(t.root)
 	fmt.Println()
 }
 
 // 前序遍历的递归算法
-func (t *BiTree)preOrderRecursion(n *node) {
+func (t *BinaryTree)preOrderRecursion(n *node) {
 
 	if n == nil {
 		return

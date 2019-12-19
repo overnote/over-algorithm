@@ -1,4 +1,4 @@
-package teststruct
+package graph
 
 import (
 	"fmt"

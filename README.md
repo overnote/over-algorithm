@@ -3,7 +3,7 @@
 本算法笔记采用`Go`语言书写，同时内部引用了Go的一些函数，如`append()`，虽然屏蔽了很多底层数据元素的操作细节，但是快速实现了数据结构，适合解题与实际应用，不是学院派风格。  
 
 笔者使用Go语言记录数据结构与算法笔记的原因：
-- C：非面向对象，笔者认为不适合快速教学，且需要进行内存管理，会耗费一定的时间在此之上
+- C：非面向对象，笔者认为不适合快速学习，会耗费一定的时间在内存管理之上
 - C++：拥有面向对象功能，但是同样需要进行内存管理，会耗费一定的时间在此之上
 - js/py：脚本语言写法变换太多，且很多结构在底层与大多语言结构特性不符，比如js的数组其实是哈希表
 - java：具备面向对象，且语法严谨规范，适合学习与教学，但是市面上Java相关的数据结构教程层出不穷，已经做得很好了
@@ -52,6 +52,14 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 - [《算法设计与分析基础》](https://book.douban.com/subject/26337727/)
 - [《数据结构与算法分析》-C语言描述](https://book.douban.com/subject/4924153/)：数据结构与算法进阶的巨匠，也拥有Java版本：[传送门](https://book.douban.com/subject/26745780/)
 - [《算法新解》](https://book.douban.com/subject/26931430/)：大量复杂数据结构的深入，难度较大
+
+其他候选：
+- [算法设计手册](https://book.douban.com/subject/4048566/)
+- [算法技术手册(原书第2版)](https://book.douban.com/subject/27123062/)
+- [算法谜题](https://book.douban.com/subject/25805152/)
+- [算法设计](https://book.douban.com/subject/2035809/)
+- [算法引论](https://book.douban.com/subject/4178907/)
+- [算法设计](https://book.douban.com/subject/1737661/)
 
 ### 1.4 算法进阶
 
