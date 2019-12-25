@@ -53,14 +53,6 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 - [《数据结构与算法分析》-C语言描述](https://book.douban.com/subject/4924153/)：数据结构与算法进阶的巨匠，也拥有Java版本：[传送门](https://book.douban.com/subject/26745780/)
 - [《算法新解》](https://book.douban.com/subject/26931430/)：大量复杂数据结构的深入，难度较大
 
-其他候选：
-- [算法设计手册](https://book.douban.com/subject/4048566/)
-- [算法技术手册(原书第2版)](https://book.douban.com/subject/27123062/)
-- [算法谜题](https://book.douban.com/subject/25805152/)
-- [算法设计](https://book.douban.com/subject/2035809/)
-- [算法引论](https://book.douban.com/subject/4178907/)
-- [算法设计](https://book.douban.com/subject/1737661/)
-
 ### 1.4 算法进阶
 
 - [《算法导论》](https://book.douban.com/subject/1885170/)：算法领域的代表作
@@ -72,6 +64,13 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 - [《剑指offer》](https://book.douban.com/subject/27008702/)：面试指南之一
 - [《编程珠玑》](https://book.douban.com/subject/3227098/)：为算法提供了精辟的解题思路，是算法思想学习的瑰宝
 - [《编程之美》](https://book.douban.com/subject/3004255/)：微软面试指南集合
+
+### 1.6 算法设计
+
+- [算法设计手册](https://book.douban.com/subject/4048566/)
+- [算法技术手册(原书第2版)](https://book.douban.com/subject/27123062/)
+- [算法设计](https://book.douban.com/subject/2035809/)
+- [算法引论](https://book.douban.com/subject/4178907/)
 
 ## 算法资料
 
