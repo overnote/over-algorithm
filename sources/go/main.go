@@ -16,9 +16,6 @@ func main() {
 	// 测试二叉线索树
 	//ztest.TestThreadTree()
 
-	// 测试二叉树
-	//ztest.TestBinaryTree()
-
 	// 测试链式队列
 	//ztest.TestLinkQueue()
 

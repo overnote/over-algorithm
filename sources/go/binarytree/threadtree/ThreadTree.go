@@ -9,25 +9,25 @@ import (
 	"fmt"
 )
 
-type node struct {
+type Node struct {
 	data	interface{}
-	lchild	*node
-	rchild	*node
+	left	*Node
+	right	*Node
 	Ltag	int
 	Rtag 	int
 }
 
 type ThreadTree struct {
-	root	*node
+	root	*Node
 	length  int
 }
 
 // 临时节点：用于记录在某个节点进行递归循环时，其前一个循环的节点
-var prevNode *node
+var prevNode *Node
 
 func NewThreadTree() *ThreadTree{
 	fmt.Println("注意：空节点使用 # 字符代替")
-	root := new(node)
+	root := new(Node)
 	t := &ThreadTree{
 		root:   root,
 		length: 0,
@@ -37,7 +37,7 @@ func NewThreadTree() *ThreadTree{
 }
 
 // 构造数据
-func (t *ThreadTree)createNode(n *node){
+func (t *ThreadTree)createNode(n *Node){
 	var e string
 	fmt.Scanf("%v", &e)
 	n.data = e							// 给当前节点赋值
@@ -45,10 +45,10 @@ func (t *ThreadTree)createNode(n *node){
 		return
 	}
 	t.length++
-	n.lchild = new(node)
-	n.rchild = new(node)
-	t.createNode(n.lchild)				// 构造左子树
-	t.createNode(n.rchild)				// 构造右子树
+	n.left = new(Node)
+	n.right = new(Node)
+	t.createNode(n.left)				// 构造左子树
+	t.createNode(n.right)				// 构造右子树
 }
 
 // 获取长度
@@ -68,31 +68,31 @@ func (t *ThreadTree)InOrderThread() {
 }
 
 // 中序遍历具体递归过程
-func (t *ThreadTree)inOrderThreadRecursion(n *node) {
+func (t *ThreadTree)inOrderThreadRecursion(n *Node) {
 
 	if n == nil {
 		return
 	}
 
 	// 处理左子树
-	t.inOrderThreadRecursion(n.lchild)
+	t.inOrderThreadRecursion(n.left)
 
 	// 如果左指针为空，则将左指针指向前驱节点
-	if n.lchild == nil {
-		n.lchild = prevNode
+	if n.left == nil {
+		n.right = prevNode
 		n.Ltag = 1
 	}
 
 	// 前一个节点的后继节点指向当前节点
-	if prevNode != nil && prevNode.rchild == nil {
-		prevNode.rchild = n
+	if prevNode != nil && prevNode.right == nil {
+		prevNode.right = n
 		prevNode.Rtag = 1
 	}
 
 	prevNode = n
 
 	// 处理右子树
-	t.inOrderThreadRecursion(n.rchild)
+	t.inOrderThreadRecursion(n.right)
 
 }
 
@@ -103,11 +103,11 @@ func (t *ThreadTree)InOrderTraverse() {
 }
 
 // 具体执行步骤
-func (t *ThreadTree)inOrderTraverseRecursion(n *node) {
+func (t *ThreadTree)inOrderTraverseRecursion(n *Node) {
 
 	// 找到最左子节点
 	for n != nil && n.Ltag == 0 {
-		n = n.lchild
+		n = n.left
 	}
 
 	// 开始遍历
@@ -118,11 +118,11 @@ func (t *ThreadTree)inOrderTraverseRecursion(n *node) {
 		}
 
 		if n.Ltag == 1 {
-			n = n.rchild
+			n = n.right
 		} else {
-			n = n.rchild
+			n = n.right
 			for n != nil && n.Ltag == 0 {
-				n = n.lchild
+				n = n.left
 			}
 		}
 	}
