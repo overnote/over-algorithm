@@ -58,7 +58,7 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 - [《算法导论》](https://book.douban.com/subject/1885170/)：算法领域的代表作
 - [《计算机程序设计艺术》](https://book.douban.com/subject/1130500/)：恢弘巨作，算法领域的里程碑
 
-### 1.5 面试方向
+### 1.5 算法题
 
 - [《程序员代码面试指南》](https://book.douban.com/subject/26638586/)：面试指南之一
 - [《剑指offer》](https://book.douban.com/subject/27008702/)：面试指南之一
@@ -67,10 +67,10 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 
 ### 1.6 算法设计
 
-- [算法设计手册](https://book.douban.com/subject/4048566/)
-- [算法技术手册(原书第2版)](https://book.douban.com/subject/27123062/)
-- [算法设计](https://book.douban.com/subject/2035809/)
-- [算法引论](https://book.douban.com/subject/4178907/)
+- [《算法设计手册》](https://book.douban.com/subject/4048566/)
+- [《算法技术手册(原书第2版)》](https://book.douban.com/subject/27123062/)
+- [《算法设计》](https://book.douban.com/subject/2035809/)
+- [《算法引论》](https://book.douban.com/subject/4178907/)
 
 ## 算法资料
 

@@ -1,6 +1,8 @@
 package main
 
-import "structure/ztest/tree"
+import (
+	"structure/ztest/tree"
+)
 
 func main() {
 

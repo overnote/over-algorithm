@@ -2,7 +2,7 @@ package tree
 
 import (
 	"fmt"
-	"structure/binarytree/threadtree"
+	"structure/tree/threadtree"
 )
 
 func TestThreadTree() {
