@@ -100,13 +100,6 @@ func levelOrderTraverse(n *node) {
 // 插入时的递归函数
 func (t *BSTree)insertRC(currentNode *node, insertNode *node){
 
-	// 判断根节点是否存在
-	if t.root == nil {
-		t.root = insertNode
-		t.length++
-		return
-	}
-
 	// 如果插入数据和当前节点数据相同
 	if currentNode.data == insertNode.data {
 		currentNode = insertNode
