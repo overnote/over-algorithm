@@ -337,10 +337,10 @@ func (t *BSTree)InsertByRC(data int) {
 	// 判断根节点是否存在
 	if t.root == nil {
 		t.root = insertNode
-		t.length++
-		return
+	} else {
+		// 执行递归插入
+		insertRC(t.root, insertNode)
 	}
 
-	// 执行递归插入
-	t.insertRC(t.root, insertNode)
+	t.length++
 }

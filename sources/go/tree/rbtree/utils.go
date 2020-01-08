@@ -1,4 +1,4 @@
-package bstree
+package rbtree
 
 import (
 	"container/list"
@@ -99,10 +99,6 @@ func levelOrderTraverse(n *node) {
 
 // 插入时的递归函数
 func insertRC(currentNode *node, insertNode *node){
-
-	if currentNode == nil || insertNode == nil {
-		panic("非法节点")
-	}
 
 	// 如果插入数据和当前节点数据相同
 	if currentNode.data == insertNode.data {
