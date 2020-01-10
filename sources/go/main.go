@@ -1,13 +1,14 @@
 package main
 
-import (
-	"structure/ztest/tree"
-)
+import "structure/ztest/hashtable"
 
 func main() {
 
+	// 测试哈希表
+	hashtable.TestHashTable()
+
 	// 测试二叉搜索树
-	tree.TestBSTree()
+	//tree.TestBSTree()
 
 	// 测试邻接表
 	//graph.TestLGraph()

@@ -1,7 +1,7 @@
 package rbtree
 
-const RED 	= true
-const BLACK = false
+const RED 	= false				 // 默认值为false：红色，因为这样做可以尽快让树满足红黑树特质
+const BLACK = true
 
 // 节点对象
 type node struct {
@@ -9,13 +9,13 @@ type node struct {
 	left	*node
 	right 	*node
 	parent	*node
-	color 	bool				// 默认值为false：黑色
+	color 	bool
 }
 
 // 红树对象
-type RBTree struct {
+type RBTree struct {ngth 	int
 	root	*node
-	length 	int
+	le
 }
 
 // 初始化红黑树
@@ -24,4 +24,9 @@ func NewBSTree() *RBTree{
 		root:   nil,
 		length: 0,
 	}
+}
+
+// 添加元素
+func (t *RBTree)Insert(data int) {
+
 }

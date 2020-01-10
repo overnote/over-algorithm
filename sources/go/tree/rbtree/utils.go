@@ -6,6 +6,22 @@ import (
 	"math"
 )
 
+// 获取兄弟节点
+func getSibling(n *node) *node {
+
+	// 如果是左子节点
+	if n.parent != nil && n == n.parent.left {
+		return n.parent.right
+	}
+
+	// 如果是右子节点
+	if n.parent != nil && n == n.parent.right {
+		return n.parent.left
+	}
+
+	return nil
+}
+
 /**
 	本文件内的函数都是二叉树常用的一些工具
  */
