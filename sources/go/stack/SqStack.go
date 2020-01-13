@@ -1,4 +1,3 @@
-```go
 /*
  *  顺序栈
  */
@@ -60,4 +59,3 @@ func (s *SqStack)Top() interface{}{
 	}
 	return s.items[s.top]
 }
-```

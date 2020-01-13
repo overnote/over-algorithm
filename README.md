@@ -13,27 +13,13 @@
 
 Go语法极简，读者即使不具备Go语言基础也能看懂代码，如果对Go语言有兴趣，也可以查看笔者的[Golang笔记](https://github.com/overnote/over-golang)进行详细学习。   
 
+源码食用指南：
+```
+为了便于初学者、非Golang语言开发者方便阅读源码，每份源码提供了极简的单元测试案例，直接运行即可。
+```
+
 当然为了能够详细了解底层操作信息，笔者在sources文件夹也提供了`C`语言版本，严格按照学院派风格（如严蔚敏版）对数据结构、算法进行描述，适合学习考研。     
 同时笔记也将提供`JavaScript`作为动态语言版本的示例学习数据结构与算法，未来可能考虑引入C++、Python、Java版本。    
-
-**Go**版本数据结构与算法以实际应用为准则，基于go mod，环境，笔者建议直接安装go1.13以上版本即可，会默认开启 go mod。食用方式：
-```
-cd sources/go
-go run main.go                  // 在 main.go 中打开想要的测试方法即可
-```
-
-**C**版本数据结构与算法以标准C为主，适合考研党，食用方式：
-```
-cd sources/c
-cc main.c                       // 在 main.c 中打开想要的测试方法即可
-```
-
-**JavaScript**版数据结构与算法实现完全采用ES6、ES Module方式书写，需要编译支持。笔者已经配置好了编译模块，按照下列命令直接食用即可： 
-```
-# 在sources/js 目录中  贴士：需要提前安装node.js。
-npm install
-npx babel-node index.js         // 在 index.js 中打开想要的测试方法即可
-```
 
 ## 数据结构与算法书籍
 
@@ -86,7 +72,7 @@ npx babel-node index.js         // 在 index.js 中打开想要的测试方法�
 欢迎关注up主：https://github.com/ruyuejun
 
 **OverNote分类**：  
-- [Go](https://github.com/overnote/over-golang)：详尽的Go领域笔记：Go语法、Go并发编程、GoWeb编程、Go微服务等
+- [Go笔记](https://github.com/overnote/over-golang)：详尽的Go领域笔记：Go语法、Go并发编程、GoWeb编程、Go微服务等
 - [大前端](https://github.com/overnote/over-javascript)：包含JavaScript、Node.js、vue/react、微信开发、Flutter等大前端技术
 - [数据结构与算法](https://github.com/overnote/over-algorithm)：以Go实现的数据结构与算法的笔记，附C，JavaScript版本
 - [分布式与微服务架构](https://github.com/overnote/over-server)：分布式与微服务等架构笔记，附mysql、redis、nginx、docker、k8s等笔记
