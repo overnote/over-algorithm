@@ -1,4 +1,4 @@
-package binaryheap
+package tree
 
 /**
 	实现一个二叉最大堆

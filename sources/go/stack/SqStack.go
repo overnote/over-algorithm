@@ -8,19 +8,19 @@ import (
 	"fmt"
 )
 
-const SqStackSize = 10				// 这里不再设计扩容代码，直接给出了一个固定容量
+const SqStackCap = 5				// 这里不再设计扩容代码，直接给出了一个固定容量
 
 // 顺序栈结构体
 type SqStack struct {
 	items		[]interface{}		// 节点数组（切片）
-	size		int					// 栈的最大容量
+	cap			int					// 栈的最大容量
 	top 		int					// 栈顶指针，其实就是当前索引位置
 }
 
 func NewSqStack() *SqStack{
 	return &SqStack{
-		items: 	make([]interface{}, SqStackSize),
-		size: 	SqStackSize,
+		items: 	make([]interface{}, SqStackCap),
+		cap: 	SqStackCap,
 		top:	-1,					// 默认-1，表示是空栈，到达0则是数组的第一个索引成为栈顶
 	}
 }
@@ -28,7 +28,7 @@ func NewSqStack() *SqStack{
 // 压栈操作
 func (s *SqStack)Push(e interface{}) bool{
 
-	if s.top == s.size - 1 {
+	if s.top == s.cap - 1 {
 		fmt.Println("栈已满")
 		return false
 	}

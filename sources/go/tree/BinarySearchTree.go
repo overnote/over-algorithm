@@ -1,7 +1,8 @@
-package bstree
+package tree
 
 import (
 	"fmt"
+	"structure/tree/bstree"
 )
 
 // 节点对象
@@ -86,7 +87,7 @@ func (t *BSTree)Insert(data int) {
 
 // 打印二叉搜索树：从上往下打印，其实质是层序遍历
 func (t *BSTree)Display() {
-	levelOrderTraverse(t.root)
+	bstree.levelOrderTraverse(t.root)
 }
 
 // 查找节点：根据值查找值所在的节点
@@ -339,7 +340,7 @@ func (t *BSTree)InsertByRC(data int) {
 		t.root = insertNode
 	} else {
 		// 执行递归插入
-		insertRC(t.root, insertNode)
+		bstree.insertRC(t.root, insertNode)
 	}
 
 	t.length++

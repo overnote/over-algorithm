@@ -1,4 +1,4 @@
-package bstree
+package tree
 
 import (
 	"container/list"
@@ -75,7 +75,7 @@ func levelOrderTraverse(n *node) {
 
 		// 取出队头
 		queueHead := queue.Remove(queue.Front())
-		tempNode := queueHead.(*node)				// 类型断言
+		tempNode := queueHead.(*node) // 类型断言
 		fmt.Printf("%v ", tempNode.data)
 
 		levelLength--
@@ -158,8 +158,8 @@ func heightByRC(n *node) int {
 
 	for queue.Len() != 0 {
 
-		queueHead := queue.Remove(queue.Front())	// 队首出队
-		tempNode := queueHead.(*node)				// 类型断言
+		queueHead := queue.Remove(queue.Front()) // 队首出队
+		tempNode := queueHead.(*node)            // 类型断言
 
 		levelLength--
 
@@ -191,8 +191,8 @@ func isCompleteTree(n *node) bool{
 	isLeaf := false			// 当前节点是否是叶子节点
 	for queue.Len() != 0 {
 
-		queueHead := queue.Remove(queue.Front())	// 队首出队
-		tempNode := queueHead.(*node)				// 类型断言
+		queueHead := queue.Remove(queue.Front()) // 队首出队
+		tempNode := queueHead.(*node)            // 类型断言
 
 		if tempNode.left == nil && tempNode.right != nil {
 			return false
@@ -222,7 +222,7 @@ func isCompleteTree(n *node) bool{
 }
 
 // 反转二叉树：所有节点的左右节点交换。其本质是遍历二叉树，使用任何遍历方式都行
-func invertBinaryTree(n *node) *node{
+func invertBinaryTree(n *node) *node {
 
 	if n ==nil {
 		return n

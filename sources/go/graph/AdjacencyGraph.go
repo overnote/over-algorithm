@@ -1,4 +1,4 @@
-package adjgraph
+package graph
 
 import (
 	"fmt"

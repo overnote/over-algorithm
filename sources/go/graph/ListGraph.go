@@ -1,4 +1,4 @@
-package listgraph
+package graph
 
 import (
 	"fmt"

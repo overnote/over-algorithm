@@ -5,46 +5,31 @@
 package queue
 
 import (
-	"errors"
 	"fmt"
 )
 
-type node struct {
+type LinkedNode struct {
 	data   	interface{}
-	next 	*node
+	next 	*LinkedNode
 }
 
-type LinkQueue struct {
+type LinkedQueue struct {
 	length	int
-	front	*node
-	rear    *node
+	front	*LinkedNode
+	rear    *LinkedNode
 }
 
-func NewLinkQueue() *LinkQueue{
-	return &LinkQueue{
+func NewLinkQueue() *LinkedQueue{
+	return &LinkedQueue{
 		length: 0,
 		front:  nil,
 		rear:   nil,
 	}
 }
 
-func (q *LinkQueue)Display() {
-	if q.length == 0 {
-		fmt.Println("队列为空")
-		return
-	}
-	currentNode := q.front
-	fmt.Printf("队列元素：")
-	for i := 1; i < q.length; i++ {
-		fmt.Printf("%v ", currentNode.data)
-		currentNode = currentNode.next
-	}
-	fmt.Println()
-}
+func (q *LinkedQueue)EnQueue(e interface{}) {
 
-func (q *LinkQueue)EnQueue(e interface{}) {
-
-	enNode := &node{
+	enNode := &LinkedNode{
 		data: e,
 		next: nil,
 	}
@@ -57,29 +42,36 @@ func (q *LinkQueue)EnQueue(e interface{}) {
 		return
 	}
 
+	currentNode := q.front
+	for currentNode.next != nil {
+		currentNode = currentNode.next
+	}
+
 	// 把新结点赋值给原队尾结点的后继
-	q.rear.next = enNode
+	currentNode.next = enNode
 	q.rear = enNode
 	q.length++
 }
 
-func (q *LinkQueue)DeQueue() (interface{}, error){
-	if q.front == q.rear {
-		fmt.Println("空队列")
-		return nil, errors.New("队列为空")
+func (q *LinkedQueue)DeQueue() interface{}{
+
+	if q.Length() == 0 {
+		fmt.Println("队列为空")
+		return nil
 	}
+
 	// 笔者这里使用的是无头节点方式，直接进行出队操作
 	temp := q.front
-	e := temp.data
 	q.front = q.front.next
-	// 若队头是队尾，则出队后将rear指向头节点
+
+	// 若队头是队尾，则出队后将tail指向head
 	if q.rear == temp {
 		q.rear = q.front
 	}
 	q.length--
-	return e, nil
+	return temp.data
 }
 
-func (q *LinkQueue)Length() int {
+func (q *LinkedQueue)Length() int {
 	return q.length
 }

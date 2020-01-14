@@ -1,4 +1,4 @@
-package rbtree
+package tree
 
 const RED 	= false				 // 默认值为false：红色，因为这样做可以尽快让树满足红黑树特质
 const BLACK = true

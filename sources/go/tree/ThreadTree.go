@@ -3,7 +3,7 @@
 		仍然使用值 # 表示值为空虚节点
 */
 
-package threadtree
+package tree
 
 import (
 	"fmt"

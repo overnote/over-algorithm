@@ -6,26 +6,26 @@ package array
 
 import "fmt"
 
-const DefaultCap = 5		// 默认容量
+const DynamicArrayCap = 5		// 默认容量
 
 type DynamicArray struct {
 	items 	[]interface{}
-	size 	int            	// 动态数组容量
+	cap 	int            	// 动态数组容量
 	length	int				// 动态数组元素个数
 }
 
 // 创建动态数组对象
 func NewDynamicArray() *DynamicArray{
 	return &DynamicArray{
-		items:  make([]interface{}, DefaultCap),
-		size:   DefaultCap,
+		items:  make([]interface{}, DynamicArrayCap),
+		cap:   DynamicArrayCap,
 		length: 0,
 	}
 }
 
 // 获取数组容量
 func (arr *DynamicArray)Size() int {
-	return arr.size
+	return arr.cap
 }
 
 // 获取数组元素个数
@@ -57,7 +57,7 @@ func (arr *DynamicArray)Pop() interface{}{
 
 // 扩容方法：超过数组容量，按照当前容量的 2 倍扩容
 func (arr *DynamicArray)expandCap() {
-	if arr.length <= arr.size {
+	if arr.length <= arr.cap {
 		return						// 无需扩容
 	}
 
@@ -67,12 +67,12 @@ func (arr *DynamicArray)expandCap() {
 		newItems[i] = arr.items[i]
 	}
 	arr.items = newItems
-	arr.size = newSize
+	arr.cap = newSize
 }
 
 // 缩容方法：数组元素个数为当前容量 1/4 时，缩容为当前容量的一半
 func (arr *DynamicArray)reduceCap() {
-	if arr.length > arr.size / 4 {
+	if arr.length > arr.cap / 4 {
 		return						// 无需缩容
 	}
 
@@ -82,7 +82,7 @@ func (arr *DynamicArray)reduceCap() {
 		newItems[i] = arr.items[i]
 	}
 	arr.items = newItems
-	arr.size = newSize
+	arr.cap = newSize
 }
 
 // 根据索引查找元素
