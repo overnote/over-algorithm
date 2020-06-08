@@ -12,10 +12,10 @@ Go语法极简，读者即使不具备Go语言基础也能看懂代码，如果�
 
 ## 目录
 
-- [第01章：概述](https://github.com/overnote/over-algorithm/tree/master/Overview/)
-  - [数据结构概述]()
-  - [算法概述]()
-  - [大O表示法]()
+- [第01章：概述](https://github.com/overnote/over-algorithm/tree/master/01-Overview)
+  - [01-数据结构概述](https://github.com/overnote/over-algorithm/blob/master/01-Overview/01-DataStructure-Overview.md)
+  - [02-算法概述](https://github.com/overnote/over-algorithm/blob/master/01-Overview/02-Algorithm-Overview.md)
+  - [03-大O表示法](https://github.com/overnote/over-algorithm/blob/master/01-Overview/01-DataStructure-Overview.md)
 - [第02章：数组](https://github.com/overnote/over-algorithm/tree/master/Array)
 - [第03章：线性表](https://github.com/overnote/over-algorithm/tree/master/LinearList)
 - [第04章：栈与队列](https://github.com/overnote/over-algorithm/tree/master/)
