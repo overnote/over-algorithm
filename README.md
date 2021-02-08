@@ -8,6 +8,8 @@
 
 源码中并未采取面向接口、继承等思想来实现工具方法的复用，笔者认为不应该将编程语言的学习成本带入数据结构，笔者的意愿是：学习者拿到每个数据结构，都可以做到信手拈来，直接使用，而不是还要查询其继承、实现结构。
 
+源码文件位于：<https://github.com/overnote/over-algorithm/tree/master/sources>
+
 最后，笔者认为 Go 语法极简，读者即使不具备 Go 语言基础也能看懂代码，是继 Java、Python 之后，笔者认为比较适合作为学习数据结构实现的语言。如果对 Go、JavaScript 语言有兴趣，也可以查看笔者的笔记进行详细学习：
 
 - [Golang 笔记](https://github.com/overnote/over-golang)
