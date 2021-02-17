@@ -6,7 +6,11 @@
 
 源码中并未采取面向接口、继承等思想来实现工具方法的复用，笔者认为不应该将编程语言的学习成本带入数据结构，笔者的意愿是：学习者拿到每个数据结构，都可以做到信手拈来，直接使用，而不是还要查询其继承、实现结构。
 
-源码文件位于：<https://github.com/overnote/over-algorithm/tree/master/sources>
+源码文件位于：<https://github.com/overnote/over-algorithm/tree/master/sources>。
+
+为了便于学习，本笔记附录了 C/C++的基础语法，但是主要是针对考研，故而学院派总结较多，不偏向务实使用。如果需要深入、广泛的学习 C 语言，请阅读《C Primer Plus》、 Brian W. Kernighan 的《C 程序设计语言》，并使用笔记：
+
+- [overnote-linux 中的 C 语言笔记](https://github.com/overnote/over-linux/tree/master/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80)
 
 最后，笔者认为 Go 语法极简，读者即使不具备 Go 语言基础也能看懂代码，是继 Java、Python 之后，笔者认为比较适合作为学习数据结构实现的语言。如果对 Go、JavaScript 语言有兴趣，也可以查看笔者的笔记进行详细学习：
 
@@ -45,7 +49,6 @@ TODO：
 
 **刷题**：
 
-- [《labuladong 的算法小抄》](https://book.douban.com/subject/35252621/)
 - [《程序员面试金典》（第 6 版）](https://book.douban.com/subject/34813624/)
 - [《程序员代码面试指南》](https://book.douban.com/subject/26638586/)：面试指南之一
 - [《剑指 offer》](https://book.douban.com/subject/27008702/)：面试指南之一
@@ -56,6 +59,9 @@ TODO：
 
 - [力扣](https://leetcode.com/)：著名的算法题网站
 - [牛客网](https://www.nowcoder.com/)：面向基础与面试的算法题库
+
+**笔者推荐的学习方式**：
+如果完全是零基础，建议通过视频来学习，B 站上拥有大量零基础数据结构教学视频，搜索即可。稍微拥有一点基础后，笔者推荐的书籍是：考研使用邓的《数据结构 C++语言描述》，工作面试使用《算法》第 4 版，后续就是做题了。
 
 ## 附录：笔记汇总
 
