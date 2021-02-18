@@ -1,5 +1,3 @@
-#ifndef _COMMON_
-#define _COMMON_
 #include <stdio.h>
 #include <stdlib.h>
 #define OK 1
@@ -10,7 +8,6 @@ typedef int Status;
 typedef int ElemType;           // 定义数据元素类型为int，不直接使用int的原因是可以随时更改
 #define LIST_MAX_SIZE 100       // 存储空间的初始分配量
 #define LIST_INCREMENT 10       // 存储空间的分配增量
-#endif
 
 
 // 顺序表结构体
