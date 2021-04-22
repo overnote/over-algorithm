@@ -1,16 +1,16 @@
 {
-  "printWidth": 120,
-  "tabWidth": 4,
-  "useTabs": false,
-  "semi": false,
-  "singleQuote": true,
-  "arrowParens": "avoid",
-  "overrides": [
-    {
-      "files": ["*.md"],
-      "options": {
-        "tabWidth": 2
-      }
-    }
-  ]
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "overrides": [
+        {
+            "files": ["*.md"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
 }
