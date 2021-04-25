@@ -12,7 +12,7 @@ typedef int ElemType;           // 定义数据元素类型为int，不直接使
 
 // 顺序表结构体
 typedef struct SqList{
-    ElemType    *arr;           // 存储空间基址，即一个动态数组
+    ElemType    *arr;           // 存储空间地址，即一个动态数组
     int         length;         // 当前长度
     int         size;           // 当前分配的存储容量，以 sizeof(ElemType)为单位
 }SqList;

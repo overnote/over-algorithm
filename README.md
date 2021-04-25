@@ -22,41 +22,40 @@
 
 ### 1.0 数据结构书籍
 
-- [《数据结构》(邓俊辉)](https://book.douban.com/subject/25859528/)：数据结构的集大成者，深入浅出
+- [《数据结构》(邓俊辉)](https://book.douban.com/subject/25859528/)：C++编写的较好的数据结构大学教材
+- [《算法新解》](https://book.douban.com/subject/26931430/)：大量复杂数据结构的深入，难度较大
 
 其他书籍：
 
 ```txt
 《趣学数据结构》：适合入门
 《大话数据结构》
+《算法精解 C 语言描述》
 ```
 
 ### 1.1 基础书籍
 
+- [《趣学算法》](https://book.douban.com/subject/27109832/)：入门书籍
 - [《算法》第 4 版](https://book.douban.com/subject/10432347/)：经典书籍，最好的算法书籍之一，Java 编写
-- [《算法详解（卷 1）——算法基础》](https://book.douban.com/subject/30424415/)：共 2 卷，可以弥补《算法 4》分治算法不足
 
 其他书籍：
 
 ```txt
-《我的第一本算法书》：挺好的一本算法入门书
-《趣学算法》：同上，适合入门
 《算法图解》
 《漫画算法：小灰的算法之旅》
-《算法精解 C语言描述》
 《啊哈!算法》
+《我的第一本算法书》
 ```
 
 ### 1.2 提升书籍
 
-- [《算法设计》克菜因伯格](https://book.douban.com/subject/35391618/)
+- [《算法详解（卷 1）——算法基础》](https://book.douban.com/subject/30424415/)：共 2 卷，弥补《算法 4》分治算法缺失
+- [《算法设计》Jon Kleinberg](https://book.douban.com/subject/35391618/)
 - [《数据结构与算法分析》-C 语言描述](https://book.douban.com/subject/4924153/)：数据结构与算法进阶的巨匠，也拥有 Java 版本：[传送门](https://book.douban.com/subject/26745780/)
-- [《算法设计与分析基础》](https://book.douban.com/subject/26337727/)
-- [《算法新解》](https://book.douban.com/subject/26931430/)：大量复杂数据结构的深入，难度较大
-- [《算法详解（卷 1）——算法基础》](https://book.douban.com/subject/30424415/)：有卷一、卷二两本
 - [《算法之道(第 2 版)》](https://book.douban.com/subject/10564644/)
 - [《算法设计手册》斯基恩纳](https://book.douban.com/subject/4048566/)
-- [《算法心得：高效算法的奥秘（原书第 2 版）》](https://book.douban.com/subject/25837031/)
+- [《算法设计与分析基础》](https://book.douban.com/subject/26337727/)
+- [《算法引论》](https://book.douban.com/subject/4178907/)
 
 ### 1.3 刷题书籍
 
@@ -69,6 +68,7 @@
 
 ### 1.4 成神书籍
 
+- [《算法心得：高效算法的奥秘（原书第 2 版）》](https://book.douban.com/subject/25837031/)
 - [《算法导论》](https://book.douban.com/subject/1885170/)：算法领域的代表作
 - [《计算机程序设计艺术》](https://book.douban.com/subject/1130500/)：恢弘巨作，算法领域的里程碑
 
