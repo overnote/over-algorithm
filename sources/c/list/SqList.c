@@ -100,17 +100,18 @@ void destroy(SqList *L){
 void display(SqList *L){
     if(L->length == 0){
         printf("[]\n");
-    } else {
-        printf("[");
-        for(int i = 0; i < L->length; i++){ 
-            if(i == L->length - 1){
-                printf("%d", L->data[i]);
-            } else {
-                printf("%d, ", L->data[i]);
-            }
-        }
-        printf("]\n");
+        return;
     }
+
+    printf("[");
+    for(int i = 0; i < L->length; i++){ 
+        if(i == L->length - 1){
+            printf("%d", L->data[i]);
+        } else {
+            printf("%d, ", L->data[i]);
+        }
+    }
+    printf("]\n");
 }
 
 // 测试
