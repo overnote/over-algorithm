@@ -42,7 +42,7 @@
         "string": "c",
         "string_view": "c",
         "sqlist.h": "c"
-    }
+    },
     // "vetur.format.defaultFormatterOptions": {
     //     "prettier": {
     //         "printWidth": 120,
@@ -65,5 +65,8 @@
     //     "MD007": {
     //         "indent": 2
     //     }
-    // }
+    // },
+    "gopls": {
+        "experimentalWorkspaceModule": true
+    }
 }
