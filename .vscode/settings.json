@@ -32,7 +32,15 @@
     "vetur.format.defaultFormatter.js": "prettier",
     "vetur.format.defaultFormatter.ts": "prettier",
     "files.associations": {
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "cstdlib": "cpp",
+        "locale": "cpp",
+        "ostream": "cpp",
+        "new": "cpp",
+        "__locale": "c",
+        "__string": "c",
+        "string": "c",
+        "string_view": "c"
     }
     // "vetur.format.defaultFormatterOptions": {
     //     "prettier": {
