@@ -40,7 +40,8 @@
         "__locale": "c",
         "__string": "c",
         "string": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "sqlist.h": "c"
     }
     // "vetur.format.defaultFormatterOptions": {
     //     "prettier": {

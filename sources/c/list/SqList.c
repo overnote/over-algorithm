@@ -1,16 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef int DataType;           // 定义数据元素类型为int，不直接使用int的原因是可以随时更改
-#define MAX_SIZE 5              // 存储空间的初始分配量，取小值便于测试
-
-
-// 顺序表结构体
-typedef struct{
-    DataType    *data;          // 存储空间地址，即一个动态数组
-    int         length;         // 当前长度，即数据元素个数
-    int         size;           // 当前分配的存储容量，以 sizeof(ElemType)为单位
-}SqList;
+#include "SqList.h"
 
 // 构造空顺序表
 SqList newSqList() {
@@ -24,9 +14,8 @@ SqList newSqList() {
     return *L;
 }
 
-
 // 增：按照一个位置插入数据
-int insert(SqList *L, int index, DataType e){
+int insert(SqList *L, DataType e, int index){
     if(index < 1 || index > L->length + 1){
         printf("插入位置不合法\n");
         return -1;
@@ -110,9 +99,9 @@ void destroy(SqList *L){
 // 显示动态数组数据
 void display(SqList *L){
     if(L->length == 0){
-        printf("()\n");
+        printf("[]\n");
     } else {
-        printf("(");
+        printf("[");
         for(int i = 0; i < L->length; i++){ 
             if(i == L->length - 1){
                 printf("%d", L->data[i]);
@@ -120,24 +109,28 @@ void display(SqList *L){
                 printf("%d, ", L->data[i]);
             }
         }
-        printf(")\n");
+        printf("]\n");
     }
 }
 
+// 测试
 int main(){
-
+    // 初始化一个顺序表
     SqList L = newSqList();
     display(&L);
 
-    insert(&L, 1, 11);
-    insert(&L, 2, 12);
-    insert(&L, 3, 13);
-    insert(&L, 4, 14);
-    insert(&L, 5, 15);
+    insert(&L, 11, 1);
+    insert(&L, 12, 2);
+    insert(&L, 17, 7);
+    display(&L);
+    
+    insert(&L, 13, 3);
+    insert(&L, 14, 4);
+    insert(&L, 15, 5);
     display(&L);
 
-    insert(&L, 6, 16);
-    insert(&L, 5, 155);
+    insert(&L, 16, 6);
+    insert(&L, 15, 5);
 
     delete(&L, 3);
     display(&L);
