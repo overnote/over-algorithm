@@ -41,7 +41,11 @@
         "__string": "c",
         "string": "c",
         "string_view": "c",
-        "sqlist.h": "c"
+        "sqlist.h": "c",
+        "stdio.h": "c",
+        "array": "c",
+        "vector": "c",
+        "__node_handle": "c"
     },
     // "vetur.format.defaultFormatterOptions": {
     //     "prettier": {

@@ -5,7 +5,6 @@
 typedef int DataType;           // 定义数据元素类型为int，不直接使用int的原因是可以随时更改
 #define MAX_SIZE 5              // 存储空间的初始分配量，取小值便于测试
 
-
 // 顺序表结构体
 typedef struct{
     DataType    *data;          // 存储空间地址，即一个动态数组
