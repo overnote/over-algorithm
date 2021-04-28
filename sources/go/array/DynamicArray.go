@@ -1,5 +1,5 @@
 /*
- *  动态数组
+ *  可变数组
  */
 
 package array
@@ -9,18 +9,34 @@ import "fmt"
 const MaxSize = 5 // 默认容量，取小值便于测试
 
 type DynamicArray struct {
-	data     []interface{} // 动态数组内的真实数组
-	capacity int           // 动态数组容量
-	length   int           // 动态数组元素个数
+	data     []interface{} // 可变数组内的真实数组
+	capacity int           // 可变数组容量
+	length   int           // 可变数组元素个数
 }
 
-// 创建动态数组对象
+// 创建可变数组结构体
 func NewDynamicArray() *DynamicArray {
 	return &DynamicArray{
 		data:     make([]interface{}, MaxSize),
 		capacity: MaxSize,
 		length:   0,
 	}
+}
+
+// 插入：根据索引插入数据
+func (arr *DynamicArray) insert(e interface{}, index int){
+	if index < 0 || index > arr.length{
+		fmt.Println("插入位置不合法")
+		return
+	}
+	
+	// 每次插入前执行扩容机制
+	arr.expandCap()
+
+	// 执行插入
+	arr.data= append(arr.data[: index-1], append([]interface{}{e}, arr.data[index:]...)...)
+	// 更新长度
+	arr.length++
 }
 
 // 扩容方法：超过数组容量，按照当前容量的 2 倍扩容
@@ -55,29 +71,6 @@ func (arr *DynamicArray) reduceCap() {
 	}
 }
 
-// 增：增加最后一位
-func (arr *DynamicArray) PushElem(e interface{}) {
-	if arr.data == nil {
-		fmt.Println("数组不存在")
-		return
-	}
-
-	arr.expandCap() // 扩容
-	arr.length++
-	arr.data[arr.length-1] = e
-}
-
-// 删:移除最后一位
-func (arr *DynamicArray) PopElem() {
-	if arr.length == 0 {
-		fmt.Println("数组元素个数为0")
-		return
-	}
-
-	arr.reduceCap() // 缩容
-	arr.length--
-}
-
 // 查：根据索引获取数据
 func (arr *DynamicArray) IndexElem(index int) interface{} {
 	if index < 0 || index > arr.length-1 {
@@ -99,7 +92,7 @@ func (arr *DynamicArray) Length() int {
 
 // 销毁：自动内存管理，无需该方法
 
-// 显示动态数组数据
+// 显示可变数组数据
 func (arr *DynamicArray) Display() {
 	fmt.Println(arr.data[0:arr.length])
 }

@@ -32,9 +32,8 @@ LinkList newLinkList(){
     return *L;
 }
 
-// 增：插入节点
+// 增：插入节点。笔者这里约定：带头节点的链表，插入时，只能在头节点之后插入，也允许插入超过最大元素个数的位置
 int insert(LinkList *L, DataType e, int index){
-    // 笔者这里规定：头节点位置为0号位，插入节点只能在头节点之后，也不允许插入超过最大元素个数的位置
     if(index < 1 || index > L->data + 1){
         printf("插入位置不合法\n");
         return -1;
@@ -58,13 +57,34 @@ int insert(LinkList *L, DataType e, int index){
     return 1;
 }
 
-// 查：查询元素位置
-int searchIndex(){
-    
+// 查：根据值查询元素位置
+int locate(){
+    return 0;
+}
+
+// 查：根据位置查询元素值
+DataType search(){
+
 }
 
 // 删：根据位置删除
 
+// 获取表长度
+int length(LinkList *L){
+    return L->data; // 如果没有头节点一般使用循环获取长度
+}
+
+// 清空表:仅保留头节点
+void clear(LinkList *L){
+    while(L->next != NULL){
+        Node temp = L->next;
+        L->next = temp->next;
+        free(temp);
+    }
+    // L->data = 0;
+}
+
+// 销毁表
 
 // 显示单链表
 void display(LinkList *L){
@@ -93,6 +113,9 @@ int main(){
     insert(&L, 11, 1);
     insert(&L, 12, 2);
     insert(&L, 13, 3);
+    display(&L);
+
+    clear(&L);
     display(&L);
     return 0;
 }

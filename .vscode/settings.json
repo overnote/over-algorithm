@@ -45,7 +45,8 @@
         "stdio.h": "c",
         "array": "c",
         "vector": "c",
-        "__node_handle": "c"
+        "__node_handle": "c",
+        "dynamicarray.h": "c"
     },
     // "vetur.format.defaultFormatterOptions": {
     //     "prettier": {
