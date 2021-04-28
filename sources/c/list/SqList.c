@@ -6,7 +6,15 @@
 SqList newSqList() {
     // 申请内存
     SqList *L = malloc(sizeof(SqList));
+    if(L == NULL){
+        printf("SqList 内存申请未成功");
+        exit(1);    // 1 表示异常退出
+    }
     L->data = (DataType *)malloc(MAX_SIZE * sizeof(DataType));
+    if(L->data == NULL){
+        printf("SqList 内部空间内存申请未成功");
+        exit(1);    // 1 表示异常退出
+    }
 
     // 初始化数据
     L->length = 0;

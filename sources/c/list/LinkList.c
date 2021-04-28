@@ -12,6 +12,10 @@ typedef struct Node{
 // 创建节点
 Node newNode(DataType data){
     Node node = malloc(sizeof(Node));
+    if(node == NULL){
+        printf("申请结点内存失败");
+        exit(1);
+    }
     node->data = data;
     node->next = NULL;
     return node;
@@ -49,6 +53,14 @@ int insert(LinkList *L, DataType e, int index){
     L->data++;  // 不要忘记存储的长度+1
     return 1;
 }
+
+// 查：查询元素位置
+int searchIndex(){
+    
+}
+
+// 删：根据位置删除
+
 
 // 显示单链表
 void display(LinkList *L){
