@@ -1,3 +1,7 @@
+/**
+ * 顺序表
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "SqList.h"
@@ -10,11 +14,12 @@ SqList newSqList() {
         printf("SqList 内存申请未成功");
         exit(1);    // 1 表示异常退出
     }
-    L->data = (DataType *)malloc(MAX_SIZE * sizeof(DataType));
-    if(L->data == NULL){
+    DataType newData = (DataType *)malloc(MAX_SIZE * sizeof(DataType));
+    if(newData == NULL){
         printf("SqList 内部空间内存申请未成功");
         exit(1);    // 1 表示异常退出
     }
+    L->data = newData;
 
     // 初始化数据
     L->length = 0;

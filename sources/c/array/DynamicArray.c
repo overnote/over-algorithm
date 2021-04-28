@@ -1,6 +1,7 @@
 /**
  * 动态数组
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,7 +11,16 @@
 DynamicArray newDynamicArray(){
     // 申请内存
     DynamicArray *A = malloc(sizeof(DynamicArray));
-    A->data = (ElemType *)malloc(MaxSize * sizeof(ElemType));
+    if(A == NULL){
+        printf("DynamicArray 内存申请失败");
+        exit(1);
+    }
+    DataType *newData = (DataType *)malloc(MaxSize * sizeof(DataType));
+    if(newData == NULL){
+        printf("DynamicArray 内部结构内存申请失败");
+        exit(1);
+    }
+    A->data = newData;
 
     // 修正属性
     A->capacity = MaxSize;
@@ -26,8 +36,12 @@ void expandCap(DynamicArray *A){
         int newCap = A->capacity * 2;
 
         // 申请新数组空间，并拷贝数据：使用最原始的for循环，尽量简单易理解
-        // realloc 方式：(ElemType *)realloc(A->data, newCap * sizeof(ElemType)); 
-        ElemType *newData = malloc(newCap * sizeof(ElemType));
+        // realloc 方式：(DataType *)realloc(A->data, newCap * sizeof(DataType)); 
+        DataType *newData = malloc(newCap * sizeof(DataType));
+        if(newData == NULL){
+            printf("DynamicArray 内部结构内存申请失败");
+            exit(1);
+        }
         for(int i = 0; i < A->length; i++){
             newData[i] = A->data[i];
         }
@@ -45,7 +59,11 @@ void reduceCap(DynamicArray *A){
         int newCap = A->capacity / 2;
 
         // 缩容
-        ElemType *newData = malloc(newCap * sizeof(ElemType));
+        DataType *newData = malloc(newCap * sizeof(DataType));
+        if(newData == NULL){
+            printf("DynamicArray 内部结构内存申请失败");
+            exit(1);
+        }
         for(int i = 0; i < A->length; i++){
             newData[i] = A->data[i];
         }
@@ -58,7 +76,7 @@ void reduceCap(DynamicArray *A){
 }
 
 // 增：增加最后一位
-void pushElem(DynamicArray *A, ElemType e){
+void pushElem(DynamicArray *A, DataType e){
     if(A->data == NULL){
         printf("数组不存在\n");
     } else {
@@ -79,10 +97,10 @@ void popElem(DynamicArray *A){
 }
 
 // 查：根据索引获取数据
-ElemType indexElem(DynamicArray *A, int index){
+DataType indexElem(DynamicArray *A, int index){
     if(index < 0 || index > A->length - 1){
         printf("数组索引越界\n");
-        return (ElemType)0;
+        return (DataType)0;
     } else {
         return A->data[index];
     }
