@@ -4,14 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef int DataType;
-
-typedef int DataType;
-typedef struct Node{
-    DataType        data;       // 结点存储的书
-    struct Node     *next;      // 结点指针
-}*Node, LinkList;
+#include "LinkList.h"
 
 // 创建节点
 Node newNode(DataType data){
@@ -32,42 +25,76 @@ LinkList newLinkList(){
     return *L;
 }
 
-// 增：插入节点。笔者这里约定：带头节点的链表，插入时，只能在头节点之后插入，也允许插入超过最大元素个数的位置
+// 增：插入节点
+// 约定：带头节点的链表，插入时，只能在头节点之后插入，也不允许插入超过最大元素个数的位置
 int insert(LinkList *L, DataType e, int index){
-    if(index < 1 || index > L->data + 1){
-        printf("插入位置不合法\n");
+
+    // 找到其前一个元素位置
+    Node p = locate(L, index - 1);
+    if(p == NULL){
         return -1;
     }
-    
+
     // 创建要插入的节点
-    Node insertNode = newNode(e);
-    // 当前循环到的节点：要先找到插入位置前一个节点(index - 1)
-    Node currentNode = L;
-    // 没有使用 while(currentNode->next != NULL) 遍历原因：当首次插入元素时，while不执行，需要额外判断一次
-    for(int i = 0; i <= index - 1; i++){
-        if(i == index - 1){
-            insertNode->next = currentNode->next;
-            currentNode->next = insertNode;
-        } else {
-            currentNode = currentNode->next;
-        }
-    }
+    Node temp = newNode(e);
+    temp->next = p->next;
+    p->next = temp;
 
     L->data++;  // 不要忘记存储的长度+1
     return 1;
 }
 
-// 查：根据值查询元素位置
-int locate(){
+// 删：根据位置删除，返回被删除的元素
+int delete(LinkList *L, int index, DataType *e){
+    // 找到其前一个元素位置
+    Node p = locate(L, index - 1);
+    if(p == NULL || p->next == NULL){
+        return -1;
+    }
+
+    // 执行删除
+    Node temp = p->next;
+    *e = temp->data;
+    p->next = p->next->next;
+    free(temp);
+
+    L->data--;  // 不要忘记存储的长度-1
     return 0;
 }
 
-// 查：根据位置查询元素值
-DataType search(){
-
+// 改
+void update(LinkList *L, int index, DataType e){
+    Node p = locate(L, index);
+    if(p == NULL){
+        return;
+    }
+    p->data = e;
 }
 
-// 删：根据位置删除
+// 查：根据值查询节点地址
+Node search(LinkList *L, DataType e){
+    Node p = L->next;
+    while(p != NULL && p->data != e){
+        p =p->next;
+    }
+    return p;
+}
+
+// 查：根据位置查询节点地址
+Node locate(LinkList *L, int index){
+    if(index < 0 || index > L->data + 1 ){
+        printf("获取位置不合法\n");
+        return NULL;
+    }
+
+    int k = 0;
+    Node p = L;
+    while(p != NULL && k < index){
+        p = p->next;
+        k++;
+    }
+    return p;
+}
 
 // 获取表长度
 int length(LinkList *L){
@@ -81,10 +108,18 @@ void clear(LinkList *L){
         L->next = temp->next;
         free(temp);
     }
-    // L->data = 0;
+    L->data = 0;
 }
 
 // 销毁表
+void destroy(LinkList *L){
+    while(L->next != NULL){
+        Node temp = L->next;
+        L->next = temp->next;
+        free(temp);
+    }
+    free(L);
+}
 
 // 显示单链表
 void display(LinkList *L){
@@ -105,17 +140,4 @@ void display(LinkList *L){
             pos++;
         }
     }
-}
-
-int main(){
-
-    LinkList L = newLinkList();
-    insert(&L, 11, 1);
-    insert(&L, 12, 2);
-    insert(&L, 13, 3);
-    display(&L);
-
-    clear(&L);
-    display(&L);
-    return 0;
 }
