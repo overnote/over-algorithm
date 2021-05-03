@@ -45,23 +45,6 @@
     "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
     "vetur.format.defaultFormatter.js": "prettier",
     "vetur.format.defaultFormatter.ts": "prettier",
-    "files.associations": {
-        "stdlib.h": "c",
-        "cstdlib": "cpp",
-        "locale": "cpp",
-        "ostream": "cpp",
-        "new": "cpp",
-        "__locale": "c",
-        "__string": "c",
-        "string": "c",
-        "string_view": "c",
-        "sqlist.h": "c",
-        "stdio.h": "c",
-        "array": "c",
-        "vector": "c",
-        "__node_handle": "c",
-        "dynamicarray.h": "c"
-    },
     // "vetur.format.defaultFormatterOptions": {
     //     "prettier": {
     //         "printWidth": 120,
