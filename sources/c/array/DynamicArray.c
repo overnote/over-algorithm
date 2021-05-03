@@ -7,19 +7,27 @@
 #include "DynamicArray.h"
 
 // 构造空可变数组
-int newDynamicArray(DynamicArray *A){
+DynamicArray newDynamicArray(){
+
+    // 申请结构体内存
+    DynamicArray *A = malloc(sizeof(DynamicArray));
+    if(A == NULL){
+        printf("内存申请失败");
+        exit(1);    // 1 表示异常退出
+    }
+
     // 申请内部动态数组内存
     A->data = (DataType *)malloc(MaxSize * sizeof(DataType));
     if(A->data == NULL){
         printf("内存申请失败");
-        return -1;
+        exit(1);    // 1 表示异常退出
     }
 
     // 修正属性
     A->capacity = MaxSize;
     A->length = 0;
 
-    return 1;
+    return *A;
 }
 
 // 增：根据索引插入数据

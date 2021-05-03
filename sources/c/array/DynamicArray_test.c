@@ -5,11 +5,7 @@
 int main(){
 
     // 初始化一个数组
-    DynamicArray arr;
-    int res = newDynamicArray(&arr);
-    if(res == -1){
-        return 0;
-    }
+    DynamicArray arr = newDynamicArray();
     display(&arr);
 
     // 测试插入

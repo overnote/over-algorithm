@@ -12,7 +12,7 @@ typedef struct{
     int         length;     // 当前数组长度
 } DynamicArray;
 
-int newDynamicArray(DynamicArray *A);                   // 构造
+DynamicArray newDynamicArray();                         // 构造
 void insert(DynamicArray *A, DataType e, int index);    // 增
 void delete(DynamicArray *A, int index);                // 删
 void update(DynamicArray *A, DataType e, int index);    // 改

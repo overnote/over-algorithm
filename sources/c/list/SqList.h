@@ -18,17 +18,20 @@ SqList newSqList();
 // 增：按照一个位置插入数据
 int insert(SqList *L, DataType e, int index);
 
-// 删：delete
+// 删：按位置删除
 int delete(SqList *L, int index);
 
+// 改：修改某个元素
+void update(SqList *L, int index);
+
 // 查：根据位置查询值
-DataType searchValue(SqList *L, int index);
+DataType search(SqList *L, int index);
 
 // 查：根据值查询位置
-int searchIndex(SqList *L, DataType e);
+int locate(SqList *L, DataType e);
 
 // 获取顺序表最大容量
-int SqListSize(SqList *L);
+int size(SqList *L);
 
 // 清空
 void clear(SqList *L);
