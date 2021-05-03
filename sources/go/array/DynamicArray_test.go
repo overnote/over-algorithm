@@ -11,22 +11,42 @@ func TestDynamicArray(t *testing.T) {
 	arr := NewDynamicArray()
 	arr.Display()
 
-	arr.PushElem(1)
-	arr.PushElem(2)
-	arr.PushElem(3)
-	arr.PushElem(4)
-	arr.PushElem(5)
-	fmt.Println("arr[4]=", arr.IndexElem(4))
+	// 测试插入
+	arr.Insert(10, 0)
+	arr.Insert(11, 1)
+	arr.Insert(12, 2)
+	arr.Insert(13, 3)
+	arr.Insert(14, 4)
 	arr.Display()
 
-	arr.PushElem(6)
-	arr.PushElem(7)
+	// 测试扩容
+	arr.Insert(15, 5)
+	arr.Insert(16, 6)
+	arr.Display()
+	fmt.Println("容量：", arr.Capacity())
+
+	// 测试删除
+	arr.Delete(0)
+	arr.Display()
+	arr.Delete(2)
 	arr.Display()
 
-	arr.PopElem()
-	arr.PopElem()
-	arr.PopElem()
-	arr.PopElem()
-	arr.PopElem()
+	// 测试缩容
+	fmt.Println("容量：", arr.Capacity())
+	arr.Delete(4)
+	arr.Delete(0)
+	arr.Delete(0)
+	arr.Delete(0)
 	arr.Display()
+	fmt.Println("容量：", arr.Capacity())
+
+	// 测试更新
+	arr.Update(100,0)
+
+	// 测试查找
+	fmt.Println("位置：",  arr.Locate(100))
+
+	// 测试取值
+	fmt.Println("取值：", arr.Get(0))
+
 }

@@ -16,7 +16,7 @@ int newDynamicArray(DynamicArray *A);                   // 构造
 void insert(DynamicArray *A, DataType e, int index);    // 增
 void delete(DynamicArray *A, int index);                // 删
 void update(DynamicArray *A, DataType e, int index);    // 改
-int search(DynamicArray *A, DataType e);                // 查
+int locate(DynamicArray *A, DataType e);                // 查
 int get(DynamicArray *A, int index, DataType *e);       // 取
 int capacity(DynamicArray *A);                          // 获取容量
 int length(DynamicArray *A);                            // 获取长度

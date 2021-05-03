@@ -5,6 +5,16 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
+    "markdownlint.config": {
+        "default": true,
+        "MD030": false
+    },
+    // "[markdown]": {
+    //     "editor.wordWrap": "on",
+    //     "editor.quickSuggestions": false,
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //     "editor.tabSize": 4
+    // },
     /*  prettier的配置 */
     // "prettier.printWidth": 100, // 超过最大值换行
     // "prettier.tabWidth": 4, // 缩进字节数
@@ -59,19 +69,8 @@
     //         "proseWrap": "preserve" // 代码超出是否要换行 preserve保留
     //     }
     // }
-    // "[markdown]": {
-    //     "editor.wordWrap": "on",
-    //     "editor.quickSuggestions": false,
-    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    //     "editor.tabSize": 2
-    // },
-    // "markdownlint.config": {
-    //     "default": true,
-    //     "MD007": {
-    //         "indent": 2
-    //     }
-    // },
     "gopls": {
         "experimentalWorkspaceModule": true
-    }
+    },
+    "workbench.editor.enablePreview": false
 }
