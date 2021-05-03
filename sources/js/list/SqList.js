@@ -26,16 +26,27 @@ class SqList {
             console.log('删除位置不合法')
             return
         }
-        if (l.length == 0) {
+        if (this.length == 0) {
             console.log('空表无元素可删除')
             return
         }
+        let e = this.data[index - 1]
         this.data.splice(index - 1, 1)
         this.length--
+        return e
+    }
+
+    // 改
+    update(index, e) {
+        if (index < 1 || index > this.length) {
+            console.log('修改位置不合法')
+            return
+        }
+        this.data[index - 1] = e
     }
 
     // 查：根据值查询位置
-    searchValue(index) {
+    search(index) {
         if (index < 1 || index > this.length) {
             console.log('参数位置不合法')
             return
@@ -44,7 +55,7 @@ class SqList {
     }
 
     // 查：根据值查询位置
-    searchIndex(e) {
+    locate(e) {
         return this.data.indexOf(e)
     }
 
@@ -67,21 +78,4 @@ class SqList {
     }
 }
 
-// 测试
-const l = new SqList()
-l.insert(11, 1)
-l.insert(12, 2)
-l.insert(17, 7)
-l.display()
-
-l.insert(13, 3)
-l.insert(14, 4)
-l.insert(15, 5)
-l.display()
-
-l.insert(16, 6)
-l.insert(5, 5)
-l.display()
-
-l.delete(3)
-l.display()
+module.exports = SqList

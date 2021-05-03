@@ -84,7 +84,7 @@ func (l *SqList)Locate(e interface{}) (error, int){
 		}
 	}
 	fmt.Println("未找到该元素")
-	return errors.New("未找到该元素"), 0
+	return errors.New("未找到该元素"), -1
 }
  
 // 获取顺序表长度
@@ -92,16 +92,16 @@ func (l *SqList)Length() int{
 	return l.length
 }
  
- // 清空
- func (l *SqList)Clear(){
+// 清空
+func (l *SqList)Clear(){
 	l.length = 0
- }
+}
  
- // 销毁
- // Go自动内存管理无需销毁
+// 销毁
+// Go自动内存管理无需销毁
  
- // 显示顺序表
- func (l *SqList) Display() {
+// 显示顺序表
+func (l *SqList) Display() {
 	fmt.Println(l.data[0:l.length])
- }
+}
  
