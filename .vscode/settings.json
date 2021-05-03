@@ -76,5 +76,6 @@
     "gopls": {
         "experimentalWorkspaceModule": true
     },
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "go.testFlags": ["-v"] // 显示go测试文件输出
 }

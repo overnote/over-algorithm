@@ -1,7 +1,6 @@
 package array
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -23,7 +22,7 @@ func TestDynamicArray(t *testing.T) {
 	arr.Insert(15, 5)
 	arr.Insert(16, 6)
 	arr.Display()
-	fmt.Println("容量：", arr.Capacity())
+	t.Log("容量：", arr.Capacity())
 
 	// 测试删除
 	arr.Delete(0)
@@ -32,21 +31,21 @@ func TestDynamicArray(t *testing.T) {
 	arr.Display()
 
 	// 测试缩容
-	fmt.Println("容量：", arr.Capacity())
+	t.Log("容量：", arr.Capacity())
 	arr.Delete(4)
 	arr.Delete(0)
 	arr.Delete(0)
 	arr.Delete(0)
 	arr.Display()
-	fmt.Println("容量：", arr.Capacity())
+	t.Log("容量：", arr.Capacity())
 
 	// 测试更新
 	arr.Update(100,0)
 
 	// 测试查找
-	fmt.Println("位置：",  arr.Locate(100))
+	t.Log("位置：",  arr.Locate(100))
 
 	// 测试取值
-	fmt.Println("取值：", arr.Get(0))
+	t.Log("取值：", arr.Get(0))
 
 }

@@ -12,30 +12,15 @@ typedef struct{
     int         size;           // 当前分配的存储容量，以 sizeof(ElemType)为单位
 }SqList;
 
-// 构造空顺序表
 SqList newSqList();
-
-// 增：按照一个位置插入数据
 int insert(SqList *L, DataType e, int index);
-
-// 删：按位置删除
-int delete(SqList *L, int index);
-
-// 改：修改某个元素
-void update(SqList *L, int index);
-
-// 查：根据位置查询值
-DataType search(SqList *L, int index);
-
-// 查：根据值查询位置
+int delete(SqList *L, int index, DataType *e);
+void update(SqList *L, DataType e, int index);
+int search(SqList *L, DataType *e, int index);
 int locate(SqList *L, DataType e);
-
-// 获取顺序表最大容量
 int size(SqList *L);
-
-// 清空
+int length(SqList *L);
 void clear(SqList *L);
-
-// 销毁
 void destroy(SqList *L);
+void diplay(SqList *L);
 
