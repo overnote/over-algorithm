@@ -128,15 +128,15 @@ void display(LinkList *L){
         return;
     }
 
-    Node currentNode = L;
+    Node p = L;
     int pos = 0;
-    while(currentNode != NULL){
+    while(p != NULL){
         if(pos == L->data){    // 最后一位
-            printf("%d\n", currentNode->data);
+            printf("%d\n", p->data);
             break;
         } else {
-            printf("%d->", currentNode->data);
-            currentNode = currentNode->next;
+            printf("%d->", p->data);
+            p = p->next;
             pos++;
         }
     }

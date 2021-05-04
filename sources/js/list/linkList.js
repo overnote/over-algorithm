@@ -1,81 +1,109 @@
-/*
- * @Name: 单向链表
- * @Description: 带头结点的链表
- * 单向链表、单向循环链表、双向链表、双向循环链表
- * @Author:yaya
- * @Date: 2020-01-12 11:26:55
- * @Editors: yaya
+/**
+ * 单链表
  */
 
-
 class Node {
-    constructor (data){
-        this.data=data;
-        this.next=null;
+    constructor(data) {
+        this.data = data
+        this.next = null
     }
 }
 
 class LinkList {
-    constructor (){
+    constructor() {
         this.head = new Node(0)
     }
+    // 增：插入节点
+    // 约定：带头节点的链表，插入时，只能在头节点之后插入，也不允许插入超过最大元素个数的位置
+    insert(e, index) {
+        // 找到其前一个元素位置
+        let p = this.locate(index - 1)
+        if (!p) {
+            return
+        }
+        // 创建要插入的节点
+        let temp = new Node(e)
+        temp.next = p.next
+        p.next = temp
 
-    length(){
-        return this.head.data;
+        this.head.data++
+        return
     }
-
-    pushBack(el){
-        let newNode = new Node(el);
-
-        let currentNode = this.head;
-
-        while(currentNode.next != null ){
-            currentNode = currentNode.next;
+    // 删
+    delete(index) {
+        // 找到前一个元素位置
+        let p = this.locate(index - 1)
+        if (!p) {
+            return
         }
-
-        currentNode.next = newNode;
-        this.head.data ++ ;
+        // 执行删除
+        let tempData = p.next.data
+        p.next = p.next.next
+        this.head.data--
+        return tempData
     }
-
-    pushFront(el){
-        let newNode = new Node(el);
-
-        if(this.length() == 0){
-            this.head.next = newNode;
-            this.head.data ++ ;
-            return;
+    // 改
+    update(index, e) {
+        let p = this.locate(index)
+        if (!p) {
+            return
         }
-
-        let firstNode = this.head.next;
-        newNode.next = firstNode;
-        this.head.next = newNode;
-        this.head.data ++ ;
+        p.data = e
     }
+    // 查
+    search(e) {
+        let p = this.next
+        while (p && p.data != e) {
+            p = p.next
+        }
+        return p
+    }
+    //定位：根据位置查询节点地址
+    locate(index) {
+        if (index < 0 || index > this.head.data + 1) {
+            console.log('获取位置不合法')
+            return
+        }
+        let k = 0
+        let p = this.head
+        while (p && k < index) {
+            p = p.next
+            k++
+        }
+        return p
+    }
+    // 获取长度
+    length() {
+        return this.head.data
+    }
+    // 清空表
+    clear() {
+        this.head.data = 0
+        this.head.next = null
+    }
+    // 显示单链表
+    display() {
+        if (this.head.data === 0) {
+            console.log('空链表')
+            return
+        }
 
-    pushIndex(el,index){
-        if(index<1 || index > this.length()+1){
-            console.log('参数不符');
-            return;
+        let p = this.head
+        let pos = 0
+        let res = ''
+        while (p) {
+            if (pos === this.head.data) {
+                res += p.data
+                break
+            } else {
+                res += p.data
+                res += '->'
+                p = p.next
+                pos++
+            }
         }
-        if(index==1){
-            this.pushFront(el);
-        }
-        if(index==this.length()+1){
-            this.pushBack(el);
-        }
-
-        let newNode = new Node(el);
-        let preNode = this.head;
-        let currentNode = null;
-
-        for(let i=1; i<index;i++){
-            preNode = preNode.next;
-        }
-        currentNode = preNode.next;
-        newNode.next = currentNode;
-        preNode.next = newNode;
-        this.head.data ++ ;
+        console.log(res)
     }
 }
 
-module.exports = LinkList;
+module.exports = LinkList
