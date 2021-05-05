@@ -30,7 +30,7 @@ LinkList* newLinkList(){
     }
     
     L->head = head;
-    L->length = 0;
+    L->size = 0;
     return L;
 }
 
@@ -38,7 +38,7 @@ LinkList* newLinkList(){
 // 约定：带头结点的链表，插入时，只能在头结点之后插入，也不允许插入超过最大元素个数的位置
 int insert(LinkList *L, DataType e, int index){
 
-    if(index < 1 || index > L->length + 1){
+    if(index < 1 || index > L->size + 1){
         printf("插入位置非法\n");
         return -1;
     }
@@ -56,14 +56,14 @@ int insert(LinkList *L, DataType e, int index){
     q->next = p->next;
     p->next = q;
 
-    L->length++;  // 不要忘记存储的长度+1
+    L->size++;  // 不要忘记存储的长度+1
     return 1;
 }
 
 // 删：根据位置删除，返回被删除的元素
 int delete(LinkList *L, int index, DataType *e){
 
-    if(index < 1 || index > L->length){
+    if(index < 1 || index > L->size){
         printf("删除位置非法\n");
         return -1;
     }
@@ -82,7 +82,7 @@ int delete(LinkList *L, int index, DataType *e){
     p->next = q->next;
     free(q);
 
-    L->length--;  // 不要忘记存储的长度-1
+    L->size--;  // 不要忘记存储的长度-1
     return 0;
 }
 
@@ -111,7 +111,7 @@ Node* search(LinkList *L, DataType e){
 
 // 查：根据位置查询结点地址
 Node* locate(LinkList *L, int index){
-    if(index < 0 || index > L->length + 1 ){
+    if(index < 0 || index > L->size + 1 ){
         printf("获取位置不合法\n");
         return NULL;
     }
@@ -127,7 +127,7 @@ Node* locate(LinkList *L, int index){
 
 // 获取表长度：若未保存该值，则可以通过循环获得
 int length(LinkList *L){
-    return L->length;
+    return L->size;
 }
 
 // 清空表:仅保留头结点
@@ -138,7 +138,7 @@ void clear(LinkList *L){
         p->next = q->next;
         free(q);
     }
-    L->length = 0;
+    L->size = 0;
 }
 
 // 销毁表
@@ -154,7 +154,7 @@ void destroy(LinkList *L){
 
 // 显示单链表
 void display(LinkList *L){
-    if(L->length == 0){
+    if(L->size == 0){
         printf("空链表\n");
         return;
     }
@@ -162,7 +162,7 @@ void display(LinkList *L){
     Node *p = L->head;
     int pos = 0;
     while(p != NULL){
-        if(pos == L->length){    // 最后一位
+        if(pos == L->size){    // 最后一位
             printf("%d\n", p->data);
             break;
         }

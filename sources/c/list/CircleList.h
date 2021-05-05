@@ -17,7 +17,7 @@ typedef struct Node{
 
 typedef struct{
     Node            *head;      // 头指针
-    int             length;     // 元素个数：约定这里排除头结点
+    int             size;     // 元素个数：约定这里排除头结点
 } CircleList;
 
 

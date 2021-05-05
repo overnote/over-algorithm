@@ -7,9 +7,9 @@ typedef int DataType;           // 定义数据元素类型为int，不直接使
 
 // 顺序表结构体
 typedef struct{
-    DataType    *data;          // 存储空间地址，即一个动态数组
-    int         length;         // 当前长度，即数据元素个数
-    int         size;           // 当前分配的存储容量，以 sizeof(ElemType)为单位
+    DataType    *data;              // 存储空间地址，即一个动态数组
+    int         size;               // 当前长度，即数据元素个数
+    int         capacity;           // 当前分配的存储容量，以 sizeof(ElemType)为单位
 } SqList;
 
 SqList* newSqList();

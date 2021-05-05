@@ -31,14 +31,14 @@ CircleList* newCircleList(){
     }
 
     L->head = head;
-    L->length = 0;
+    L->size = 0;
     return L;
 }
 
 // 增：插入结点
 // 约定：插入时，只能在头结点之后插入，也不允许插入超过最大元素个数的位置
 int insert(CircleList *L, DataType e, int index){
-    if(index < 1 || index > L->length + 1){
+    if(index < 1 || index > L->size + 1){
         printf("插入位置不合法\n");
         return -1;
     }
@@ -56,14 +56,14 @@ int insert(CircleList *L, DataType e, int index){
     q->next = p->next;
     p->next = q;
 
-    L->length++;
+    L->size++;
     return 1;
 }
 
 // 删：根据位置删除，返回被删除的元素
 int delete(CircleList *L, int index, DataType *e){
     
-    if(index < 1 || index > L->length){
+    if(index < 1 || index > L->size){
         printf("删除位置非法\n");
         return -1;
     }
@@ -82,7 +82,7 @@ int delete(CircleList *L, int index, DataType *e){
     p->next = q->next;
     free(q);
 
-    L->length--;  // 不要忘记存储的长度-1
+    L->size--;  // 不要忘记存储的长度-1
     return 0;
 }
 
@@ -109,7 +109,7 @@ Node* search(CircleList *L, DataType e){
 
 // 定位
 Node* locate(CircleList *L, int index){
-    if(index < 0 || index > L->length + 1){
+    if(index < 0 || index > L->size + 1){
         printf("获取位置不合法\n");
         return NULL;
     }
@@ -125,7 +125,7 @@ Node* locate(CircleList *L, int index){
 
 // 获取表长度:没有头结点一般使用循环获取长度
 int length(CircleList *L){
-    return L->length;
+    return L->size;
 }
 
 // 清空表:仅保留头结点
@@ -137,7 +137,7 @@ void clear(CircleList *L){
         free(q);
     }
     L->head->next = L->head;    // 重新指定头结点循环
-    L->length = 0;
+    L->size = 0;
 }
 
 // 销毁表
@@ -153,7 +153,7 @@ void destroy(CircleList *L){
 
 // 显示循环链表
 void display(CircleList *L){
-    if(L->length == 0){
+    if(L->size == 0){
         printf("空链表\n");
         return;
     }
@@ -161,7 +161,7 @@ void display(CircleList *L){
     Node *p = L->head;
     int pos = 0;
     while(p->next != NULL){
-        if(pos == L->length){
+        if(pos == L->size){
             printf("%d->%d->...\n", p->data, L->head->data);
             break;
         }
