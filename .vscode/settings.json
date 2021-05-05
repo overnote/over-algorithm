@@ -67,6 +67,7 @@
         "string_view": "c",
         "vector": "c",
         "__locale": "c",
-        "__string": "c"
-    } // 显示go测试文件输出
+        "__string": "c",
+        "__node_handle": "c"
+    }
 }
