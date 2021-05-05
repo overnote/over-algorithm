@@ -7,7 +7,7 @@
 #include "SqList.h"
 
 // 构造空顺序表
-SqList newSqList() {
+SqList* newSqList() {
     // 申请内存
     SqList *L = malloc(sizeof(SqList));
     if(L == NULL){
@@ -24,7 +24,7 @@ SqList newSqList() {
     // 初始化数据
     L->length = 0;
     L->size = MAX_SIZE;
-    return *L;
+    return L;
 }
 
 // 增：按照一个位置插入数据

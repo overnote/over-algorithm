@@ -10,9 +10,9 @@ typedef struct{
     DataType    *data;          // 存储空间地址，即一个动态数组
     int         length;         // 当前长度，即数据元素个数
     int         size;           // 当前分配的存储容量，以 sizeof(ElemType)为单位
-}SqList;
+} SqList;
 
-SqList newSqList();
+SqList* newSqList();
 int insert(SqList *L, DataType e, int index);
 int delete(SqList *L, int index, DataType *e);
 void update(SqList *L, DataType e, int index);

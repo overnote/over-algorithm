@@ -6,11 +6,11 @@
 #include <stdlib.h>
 #include "LinkList.h"
 
-// 创建节点
-Node newNode(DataType data){
-    Node node = malloc(sizeof(Node));
+// 创建结点
+Node* newNode(DataType data){
+    Node *node = malloc(sizeof(Node));
     if(node == NULL){
-        printf("申请结点内存失败");
+        printf("申请结点内存失败\n");
         exit(1);
     }
     node->data = data;
@@ -19,125 +19,148 @@ Node newNode(DataType data){
 }
 
 // 创建单链表
-LinkList newLinkList(){
-    // 申请链表内存：其本身其实就是创建了一个头节点
-    LinkList *L = newNode(0);
-    return *L;
+LinkList* newLinkList(){
+    // 创建头结点，返回头指针
+    Node *head = newNode(0);
+
+    LinkList *L = malloc(sizeof(LinkList));
+    L->head = head;
+    L->length = 0;
+    return L;
 }
 
-// 增：插入节点
-// 约定：带头节点的链表，插入时，只能在头节点之后插入，也不允许插入超过最大元素个数的位置
+// 增：插入结点
+// 约定：带头结点的链表，插入时，只能在头结点之后插入，也不允许插入超过最大元素个数的位置
 int insert(LinkList *L, DataType e, int index){
 
-    // 找到其前一个元素位置
-    Node p = locate(L, index - 1);
-    if(p == NULL){
+    if(index < 1 || index > L->length + 1){
+        printf("插入位置非法\n");
         return -1;
     }
 
-    // 创建要插入的节点
-    Node temp = newNode(e);
-    temp->next = p->next;
-    p->next = temp;
+    // 找到插入位置前一个位置：也可以使用 locate函数
+    Node *p = L->head;
+    int k = 1;
+    while(p->next != NULL && k <= index - 1){
+        printf("循环了一轮\n");
+        p = p->next;
+        k++;
+    }
 
-    L->data++;  // 不要忘记存储的长度+1
+    // 创建要插入的结点
+    Node *q = newNode(e);
+    q->next = p->next;
+    p->next = q;
+
+    L->length++;  // 不要忘记存储的长度+1
     return 1;
 }
 
 // 删：根据位置删除，返回被删除的元素
 int delete(LinkList *L, int index, DataType *e){
-    // 找到其前一个元素位置
-    Node p = locate(L, index - 1);
-    if(p == NULL || p->next == NULL){
+
+    if(index < 1 || index > L->length){
+        printf("删除位置非法\n");
         return -1;
     }
 
-    // 执行删除
-    Node temp = p->next;
-    *e = temp->data;
-    p->next = p->next->next;
-    free(temp);
+    // 找到删除位置前一个位置：也可以使用 locate函数
+    Node *p = L->head;
+    int k = 1;
+    while(p->next != NULL && k <= index - 1){
+        p = p->next;
+        k++;
+    }
 
-    L->data--;  // 不要忘记存储的长度-1
+    // 执行删除
+    Node *q = p->next;
+    *e = q->data;
+    p->next = q->next;
+    free(q);
+
+    L->length--;  // 不要忘记存储的长度-1
     return 0;
 }
 
 // 改
 void update(LinkList *L, int index, DataType e){
-    Node p = locate(L, index);
+
+    // 找到修改位置：这里使用 locate 函数
+    Node *p = locate(L, index);
     if(p == NULL){
         return;
     }
     p->data = e;
 }
 
-// 查：根据值查询节点地址
-Node search(LinkList *L, DataType e){
-    Node p = L->next;
+// 查：根据值查询结点地址
+Node* search(LinkList *L, DataType e){
+    Node *p = L->head;
     while(p != NULL && p->data != e){
-        p =p->next;
+        p = p->next;
     }
     return p;
 }
 
-// 查：根据位置查询节点地址
-Node locate(LinkList *L, int index){
-    if(index < 0 || index > L->data + 1 ){
+// 查：根据位置查询结点地址
+Node* locate(LinkList *L, int index){
+    if(index < 0 || index > L->length + 1 ){
         printf("获取位置不合法\n");
         return NULL;
     }
 
-    int k = 0;
-    Node p = L;
-    while(p != NULL && k < index){
+    Node *p = L->head;
+    int k = 1;
+    while(p != NULL && k <= index){
         p = p->next;
         k++;
     }
     return p;
 }
 
-// 获取表长度
+// 获取表长度：若未保存该值，则可以通过循环获得
 int length(LinkList *L){
-    return L->data; // 如果没有头节点一般使用循环获取长度
+    return L->length;
 }
 
-// 清空表:仅保留头节点
+// 清空表:仅保留头结点
 void clear(LinkList *L){
-    while(L->next != NULL){
-        Node temp = L->next;
-        L->next = temp->next;
-        free(temp);
+    Node *p = L->head;
+    while(p->next != NULL){
+        Node *q = p->next;
+        p->next = q->next;
+        free(q);
     }
-    L->data = 0;
+    L->length = 0;
 }
 
 // 销毁表
 void destroy(LinkList *L){
-    while(L->next != NULL){
-        Node temp = L->next;
-        L->next = temp->next;
-        free(temp);
+    Node *p = L->head;
+    while(p->next != NULL){
+        Node *q = p->next;
+        p->next = q->next;
+        free(q);
     }
     free(L);
 }
 
 // 显示单链表
 void display(LinkList *L){
-    if(L->data == 0){
+    if(L->length == 0){
         printf("空链表\n");
         return;
     }
 
-    Node p = L;
+    Node *p = L->head;
     int pos = 0;
     while(p != NULL){
-        if(pos == L->data){    // 最后一位
+        if(pos == L->length){    // 最后一位
             printf("%d\n", p->data);
             break;
-        } else {
-            printf("%d->", p->data);
-            p = p->next;
-            pos++;
         }
+        printf("%d->", p->data);
+        p = p->next;
+        pos++;
     }
 }
