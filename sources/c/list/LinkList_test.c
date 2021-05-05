@@ -23,6 +23,8 @@ int main(){
     update(L, 3, 44);
     display(L);
 
+    printf("查询元素:%d，结果：%d\n", 44, search(L, 44)->data);
+
     clear(L);
     display(L);
 

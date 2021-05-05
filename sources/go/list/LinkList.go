@@ -19,7 +19,6 @@ type LinkList struct {
 	length  int
 }
 
-
 // 构造Node
 func newNode(e interface{}) *Node{
 	return &Node {
@@ -39,39 +38,56 @@ func NewLinkList() *LinkList {
 
 // 增：插入结点
 // 约定：带头结点的链表，插入时，只能在头结点之后插入，也不允许插入超过最大元素个数的位置
-func (l *LinkList)Insert(e interface{}, index int) error{
+func (l *LinkList)Insert(e interface{}, index int){
 	
-	// 找到其前一个元素位置
-	p := l.Locate(index - 1)
-	if p == nil {
-		return nil
+	if index < 1 || index > l.length + 1 {
+		fmt.Println("插入位置非法")
+		return
+	}
+
+    // 找到插入位置前一个位置：也可以使用 Locate函数
+	p := l.head
+	k := 0
+	for p.next != nil && k < index - 1 {
+		p = p.next
+		k++
 	}
 
     // 创建要插入的结点
-	temp := newNode(e)
-	temp.next = p.next
-	p.next = temp
+	q := newNode(e)
+	q.next = p.next
+	p.next = q
 	
-	l.data = l.data.(int) + 1
-	return nil
+	l.length++
 }
 
 // 删
 func (l *LinkList)Delete(index int) interface{}{
-	// 找到前一个元素位置
-	p := l.Locate(index - 1)
-	if p == nil || p.next == nil{
-        return nil;
-    }
+
+	if index < 1 || index > l.length {
+		fmt.Println("删除位置非法")
+		return nil
+	}
+
+    // 找到删除位置前一个位置：也可以使用 Locate函数
+	p := l.head
+	k := 0
+	for p.next != nil && k < index - 1 {
+		p = p.next
+		k++
+	}
+
 	// 执行删除
 	tempData := p.next.data
 	p.next = p.next.next
-	l.data = l.data.(int) - 1
+
+	l.length--
 	return tempData
 }
 
 // 改
 func (l *LinkList)Update(index int, e interface{}){
+	// 找到修改位置：这里使用 locate 函数
 	p := l.Locate(index)
 	if p == nil {
 		return
@@ -81,23 +97,26 @@ func (l *LinkList)Update(index int, e interface{}){
 
 // 查
 func (l *LinkList)Search(e interface{}) *Node{
-	p := l.next
-	for p != nil && p.data != e {
+	p := l.head
+	for p.next != nil{
+		if p.data == e {
+			return p
+		}
 		p = p.next
 	}
-	return p
+	return nil
 }
 
 // 定位：根据位置查询结点地址
 func (l *LinkList)Locate(index int) *Node{
-	if index < 0 || index > l.data.(int) + 1{
+	if index < 0 || index > l.length + 1{
 		fmt.Println("获取位置不合法")
 		return nil
 	}
 
+	p := l.head
 	k := 0
-	p := l
-	for p != nil && k < index {
+	for p.next != nil && k < index {
 		p = p.next
 		k++
 	}
@@ -106,26 +125,26 @@ func (l *LinkList)Locate(index int) *Node{
 
 // 获取长度
 func (l *LinkList)Length() int {
-	return l.data.(int)	// 如果没有头结点一般使用循环获取长度
+	return l.length	// 如果没有头结点一般使用循环获取长度
 }
 
 // 清空表：仅保留头结点
 func (l *LinkList)Clear(){
-	l.data = 0
-	l.next = nil
+	l.length = 0
+	l.head.next = nil
 }
 
 // 显示单链表
 func (l *LinkList)Display(){
-	if l.data.(int) == 0 {
+	if l.length == 0 {
 		fmt.Println("空链表")
 		return
 	}
 
-	p := l
+	p := l.head
 	pos := 0
 	for p != nil {
-		if pos == l.data.(int) { // 最后一位
+		if pos == l.length{ // 最后一位
 			fmt.Println(p.data)
 			break
 		} else {

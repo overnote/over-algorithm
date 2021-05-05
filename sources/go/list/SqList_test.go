@@ -1,6 +1,7 @@
 package list
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -18,15 +19,15 @@ func TestSqList(t *testing.T) {
     l.Insert(15, 5)
 	l.Display()
 
-	t.Log("删除元素:", l.Delete(3))
+	fmt.Println("删除元素:", l.Delete(3))
 	l.Display()
 
     l.Update(1, 100);
 	l.Display()
 	
 	err1, e1 := l.Search(2)
-	t.Log("查询元素:", err1, e1)
+	fmt.Println("查询元素:", err1, e1)
 
 	err2, e2 := l.Locate(100)
-	t.Log("查询元素:",err2, e2)
+	fmt.Println("查询元素:",err2, e2)
 }

@@ -40,9 +40,8 @@ int insert(LinkList *L, DataType e, int index){
 
     // 找到插入位置前一个位置：也可以使用 locate函数
     Node *p = L->head;
-    int k = 1;
-    while(p->next != NULL && k <= index - 1){
-        printf("循环了一轮\n");
+    int k = 0;
+    while(p->next != NULL && k < index - 1){
         p = p->next;
         k++;
     }
@@ -66,8 +65,8 @@ int delete(LinkList *L, int index, DataType *e){
 
     // 找到删除位置前一个位置：也可以使用 locate函数
     Node *p = L->head;
-    int k = 1;
-    while(p->next != NULL && k <= index - 1){
+    int k = 0;
+    while(p->next != NULL && k < index - 1){
         p = p->next;
         k++;
     }
@@ -96,10 +95,13 @@ void update(LinkList *L, int index, DataType e){
 // 查：根据值查询结点地址
 Node* search(LinkList *L, DataType e){
     Node *p = L->head;
-    while(p != NULL && p->data != e){
+    while(p->next != NULL){
+        if(p->data == e){
+            return p;
+        }
         p = p->next;
     }
-    return p;
+    return NULL;
 }
 
 // 查：根据位置查询结点地址
@@ -110,8 +112,8 @@ Node* locate(LinkList *L, int index){
     }
 
     Node *p = L->head;
-    int k = 1;
-    while(p != NULL && k <= index){
+    int k = 0;
+    while(p->next != NULL && k < index){
         p = p->next;
         k++;
     }
