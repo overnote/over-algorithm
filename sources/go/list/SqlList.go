@@ -12,38 +12,38 @@ import (
 // 顺序表结构体
 type SqList struct {
 	data    		[]interface{} 	// 使用切片结构，可以摆脱数组容量限制
-	length 			int         	// 该顺序表元素个数
+	size 			int         	// 该顺序表元素个数
 }
  
 // 构造实例
 func NewSqList() *SqList {
 	return &SqList{
 		data:		make([]interface{}, 5),// 给一个初始默认长度（非容量）
-		length: 	0,
+		size: 	0,
 	}
 }
  
 // 增：按照一个位置插入数据
 func (l *SqList)Insert(e interface{}, index int) {
  
-	if index < 1 || index > l.length + 1 {
+	if index < 1 || index > l.size + 1 {
 		fmt.Println("插入位置不合法")
 		return
 	}
  
 	// 将切片在插入位置一份为2，再合并，即可实现插入效果
 	l.data= append(l.data[: index-1], append([]interface{}{e}, l.data[index-1:]...)...)
-	l.length++
+	l.size++
 }
  
 // 删：删除位置上的元素，并获取到删除元素的值
 func (l *SqList)Delete(index int) interface{}{
-	if index < 1 || index > l.length {
+	if index < 1 || index > l.size {
 		fmt.Println("删除位置不合法")
 		return nil
 	}
  
-	if l.length == 0 {
+	if l.size == 0 {
 		fmt.Println("空表无元素可移除")
 		return nil
 	}
@@ -51,16 +51,16 @@ func (l *SqList)Delete(index int) interface{}{
 	e := l.data[index - 1]
  
 	// 也可以使用append方式
-	for i := index; i < l.length; i++ {
+	for i := index; i < l.size; i++ {
 		l.data[i - 1] = l.data[i]
 	}
-	l.length--
+	l.size--
 	return e
 }
 
 // 改
 func (l *SqList)Update(index int, e interface{}){
-	if index < 1 || index > l.length {
+	if index < 1 || index > l.size {
 		fmt.Println("修改位置不合法");
 		return
 	}
@@ -69,7 +69,7 @@ func (l *SqList)Update(index int, e interface{}){
  
 // 查：根据位置查询值
 func (l *SqList)Search(index int)(error, interface{}){
-	if index < 1 || index > l.length {
+	if index < 1 || index > l.size {
 		fmt.Println("参数位置不合法")
 		return errors.New("参数位置不合法"), 0
 	}
@@ -78,7 +78,7 @@ func (l *SqList)Search(index int)(error, interface{}){
  
 // 查：根据值查询位置
 func (l *SqList)Locate(e interface{}) (error, int){
-	for i:= 0; i < l.length; i++ {
+	for i:= 0; i < l.size; i++ {
 		if l.data[i] == e {
 			return nil, i
 		}
@@ -89,12 +89,12 @@ func (l *SqList)Locate(e interface{}) (error, int){
  
 // 获取顺序表长度
 func (l *SqList)Length() int{
-	return l.length
+	return l.size
 }
  
 // 清空
 func (l *SqList)Clear(){
-	l.length = 0
+	l.size = 0
 }
  
 // 销毁
@@ -102,6 +102,6 @@ func (l *SqList)Clear(){
  
 // 显示顺序表
 func (l *SqList) Display() {
-	fmt.Println(l.data[0:l.length])
+	fmt.Println(l.data[0:l.size])
 }
  

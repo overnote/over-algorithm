@@ -1,5 +1,5 @@
 /**
- * 单链表
+ * 循环链表
  */
 
 class Node {
@@ -9,59 +9,59 @@ class Node {
     }
 }
 
-class LinkList {
+class CircleList {
     constructor() {
-        this.head = new Node(0)
+        let p = new Node(0)
+        p.next = p
+        this.head = p
         this.size = 0
     }
     // 增：插入结点
     // 约定：带头结点的链表，插入时，只能在头结点之后插入，也不允许插入超过最大元素个数的位置
     insert(e, index) {
         if (index < 1 || index > this.size + 1) {
-            console.log('插入位置非法')
+            console.log('插入位置不合法')
             return
         }
 
-        // 找到插入位置前一个位置：也可以使用 locate函数
+        // 找到插入位置前一个位置：也可以使用 Locate函数
         let p = this.head
         let k = 0
-        while (p.next != null && k < index - 1) {
+        while (p.next != this.head && k < index - 1) {
             p = p.next
             k++
         }
 
-        // 创建要插入的结点
+        // 创建要插入的节点
         let q = new Node(e)
         q.next = p.next
         p.next = q
 
         this.size++
     }
-    // 删
+    // 删：根据位置删除，返回被删除的元素
     delete(index) {
         if (index < 1 || index > this.size) {
             console.log('删除位置非法')
             return
         }
-
-        // 找到插入位置前一个位置：也可以使用 locate函数
+        // 找到删除位置前一个位置：也可以使用 Locate函数
         let p = this.head
         let k = 0
-        while (p.next != null && k < index - 1) {
+        while (p.next != this.head && k < index - 1) {
             p = p.next
             k++
         }
-
         // 执行删除
-        let tempData = p.next.data
-        p.next = p.next.next
+        let q = p.next
+        let tempData = q.data
+        p.next = q.next
 
         this.size--
         return tempData
     }
     // 改
     update(index, e) {
-        // 找到修改位置：这里使用 locate 函数
         let p = this.locate(index)
         if (!p) {
             return
@@ -71,14 +71,14 @@ class LinkList {
     // 查
     search(e) {
         let p = this.head
-        while (p.next) {
+        while (p.next != this.head) {
             if (p.data == e) {
                 return p
             }
             p = p.next
         }
     }
-    //定位：根据位置查询结点地址
+    // 定位
     locate(index) {
         if (index < 0 || index > this.size + 1) {
             console.log('获取位置不合法')
@@ -87,7 +87,7 @@ class LinkList {
 
         let p = this.head
         let k = 0
-        while (p.next && k < index) {
+        while (p.next != this.head && k < index) {
             p = p.next
             k++
         }
@@ -99,12 +99,12 @@ class LinkList {
     }
     // 清空表
     clear() {
+        this.head.next = this.head
         this.size = 0
-        this.head.next = null
     }
-    // 显示单链表
+    // 显示表
     display() {
-        if (this.size === 0) {
+        if (this.size == 0) {
             console.log('空链表')
             return
         }
@@ -112,19 +112,21 @@ class LinkList {
         let p = this.head
         let pos = 0
         let res = ''
-        while (p) {
-            if (pos === this.size) {
-                res += p.data
-                break
-            } else {
+        while (p.next) {
+            if (pos == this.size) {
                 res += p.data
                 res += '->'
-                p = p.next
-                pos++
+                res += this.head.data
+                res += '->...'
+                break
             }
+            res += p.data
+            res += '->'
+            p = p.next
+            pos++
         }
         console.log(res)
     }
 }
 
-module.exports = LinkList
+module.exports = CircleList
