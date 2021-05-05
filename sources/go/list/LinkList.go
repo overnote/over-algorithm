@@ -7,14 +7,18 @@ import (
 	"fmt"
 )
 
-// 单链表节点类型
+// 单链表结点类型
 type Node struct {
 	data	interface{}
 	next 	*Node
 }
 
 // 单链表
-type LinkList = Node	// 类型别名
+type LinkList struct {
+	head	*Node
+	length  int
+}
+
 
 // 构造Node
 func newNode(e interface{}) *Node{
@@ -26,11 +30,15 @@ func newNode(e interface{}) *Node{
 
 // 构造单链表
 func NewLinkList() *LinkList {
-	return newNode(0)
+	p := newNode(0)
+	return &LinkList{
+		head: p,
+		length: 0,
+	}
 }
 
-// 增：插入节点
-// 约定：带头节点的链表，插入时，只能在头节点之后插入，也不允许插入超过最大元素个数的位置
+// 增：插入结点
+// 约定：带头结点的链表，插入时，只能在头结点之后插入，也不允许插入超过最大元素个数的位置
 func (l *LinkList)Insert(e interface{}, index int) error{
 	
 	// 找到其前一个元素位置
@@ -39,7 +47,7 @@ func (l *LinkList)Insert(e interface{}, index int) error{
 		return nil
 	}
 
-    // 创建要插入的节点
+    // 创建要插入的结点
 	temp := newNode(e)
 	temp.next = p.next
 	p.next = temp
@@ -80,7 +88,7 @@ func (l *LinkList)Search(e interface{}) *Node{
 	return p
 }
 
-// 定位：根据位置查询节点地址
+// 定位：根据位置查询结点地址
 func (l *LinkList)Locate(index int) *Node{
 	if index < 0 || index > l.data.(int) + 1{
 		fmt.Println("获取位置不合法")
@@ -98,10 +106,10 @@ func (l *LinkList)Locate(index int) *Node{
 
 // 获取长度
 func (l *LinkList)Length() int {
-	return l.data.(int)	// 如果没有头节点一般使用循环获取长度
+	return l.data.(int)	// 如果没有头结点一般使用循环获取长度
 }
 
-// 清空表：仅保留头节点
+// 清空表：仅保留头结点
 func (l *LinkList)Clear(){
 	l.data = 0
 	l.next = nil

@@ -7,7 +7,7 @@
 #include "DynamicArray.h"
 
 // 构造空可变数组
-DynamicArray newDynamicArray(){
+DynamicArray* newDynamicArray(){
 
     // 申请结构体内存
     DynamicArray *A = malloc(sizeof(DynamicArray));
@@ -27,7 +27,7 @@ DynamicArray newDynamicArray(){
     A->capacity = MaxSize;
     A->length = 0;
 
-    return *A;
+    return A;
 }
 
 // 增：根据索引插入数据

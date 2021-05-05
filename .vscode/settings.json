@@ -60,5 +60,13 @@
         "experimentalWorkspaceModule": true
     },
     "workbench.editor.enablePreview": false,
-    "go.testFlags": ["-v"] // 显示go测试文件输出
+    "go.testFlags": ["-v"],
+    "files.associations": {
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "vector": "c",
+        "__locale": "c",
+        "__string": "c"
+    } // 显示go测试文件输出
 }
