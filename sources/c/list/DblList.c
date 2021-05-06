@@ -40,7 +40,6 @@ DblList* newDblList(){
 }
 
 // 增：插入节点。约定只能在头节点之后插入，且不超过最大元素个数位置
-// 贴士：本写法中，可以依据 index 和 size 的大小关系确定循环方向
 int insert(DblList *L, DataType e, int index){
 
     if(index < 1 || index > L->size + 1){
@@ -51,7 +50,7 @@ int insert(DblList *L, DataType e, int index){
     // 找到插入位置前一个位置：也可以使用 locate函数
     Node *p = L->head;
     int k = 0;
-    while(p->next != NULL && k < index - 1){
+    while(p->next != L->head && k < index - 1){
         p = p->next;
         k++;
     }
@@ -69,7 +68,6 @@ int insert(DblList *L, DataType e, int index){
 }
 
 // 删：根据位置删除，返回被删除的元素
-// 贴士：本写法中，可以依据 index 和 size 的大小关系确定循环方向
 int delete(DblList *L, int index, DataType *e){
     
     if(index < 1 || index > L->size){
@@ -112,14 +110,19 @@ Node* search(DblList *L, DataType e){
     Node *p = L->head;
     while(p->next != L->head){
         if(p->data == e){
-            return p;
+            break;
         }
         p = p->next;
     }
-    return NULL;
+
+    if(p->data == e){
+        return p;
+    } else {
+        return NULL;
+    }
 }
 
-// 定位：这里知道size与index，可以根据二者大小选择循环遍历的方向进行优化
+// 定位
 Node* locate(DblList *L, int index){
     if(index < 0 || index > L->size + 1){
         printf("获取位置不合法\n");
@@ -133,21 +136,6 @@ Node* locate(DblList *L, int index){
         k++;
     }
 
-    // 优化
-    // if(index <= L->size / 2){   // 往后找
-    //     printf("往后找\n");
-    //     while(p->next != L->head && k < index){
-    //         p = p->next;
-    //         k++;
-    //     }
-    // } else {    // 往前找
-    //     printf("往前找\n");
-    //     while(p->prev != L->head && k < (L->size - index) - 1){
-    //         p = p->prev;
-    //         k++;
-    //     }
-    // }
-
     return p;
 }
 
@@ -156,6 +144,7 @@ Node* prevElem(DblList *L, DataType e){
     Node *p = search(L, e);
     if(p == NULL){
         printf("未找到该元素\n");
+        return NULL;
     }
     return p->prev;
 }
@@ -165,6 +154,7 @@ Node* nextElem(DblList *L, DataType e){
     Node *p = search(L, e);
     if(p == NULL){
         printf("未找到该元素\n");
+        return NULL;
     }
     return p->next;
 }
