@@ -100,11 +100,15 @@ func (l *CircleList)Search(e interface{}) *CircleNode{
 	p := l.head
 	for p.next != l.head {
 		if p.data == e {
-			return p
+			break
 		}
 		p = p.next
 	}
-	return nil
+	if p.data == e {
+		return p
+	} else {
+		return nil
+	}
 }
 
 // 定位

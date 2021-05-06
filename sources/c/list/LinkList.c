@@ -102,11 +102,16 @@ Node* search(LinkList *L, DataType e){
     Node *p = L->head;
     while(p->next != NULL){
         if(p->data == e){
-            return p;
+            break;
         }
         p = p->next;
     }
-    return NULL;
+
+    if(p->data == e){
+        return p;
+    } else {
+        return NULL;
+    }
 }
 
 // 查：根据位置查询结点地址

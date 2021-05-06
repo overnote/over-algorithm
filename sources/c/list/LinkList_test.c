@@ -20,10 +20,15 @@ int main(){
     printf("删除元素：%d\n", e2);
     display(L);
 
-    update(L, 3, 44);
+    update(L, 1, 21);
     display(L);
 
-    printf("查询元素:%d，结果：%d\n", 44, search(L, 44)->data);
+    printf("查询元素:21，结果：%d\n", search(L,21)->data);
+
+    update(L, 4, 44);
+    display(L);
+
+    printf("查询元素:44，结果：%d\n", search(L, 44)->data);
 
     clear(L);
     display(L);

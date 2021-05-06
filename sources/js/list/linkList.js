@@ -73,9 +73,14 @@ class LinkList {
         let p = this.head
         while (p.next) {
             if (p.data == e) {
-                return p
+                break
             }
             p = p.next
+        }
+        if (p.data == e) {
+            return p
+        } else {
+            return null
         }
     }
     //定位：根据位置查询结点地址

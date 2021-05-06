@@ -16,9 +16,12 @@ l.display()
 console.log('删除元素：', l.delete(3))
 l.display()
 
-l.update(3, 44)
+l.update(1, 21)
 l.display()
+console.log('查询元素 21，结果：', l.search(21).data)
 
+l.update(4, 44)
+l.display()
 console.log('查询元素 44，结果：', l.search(44).data)
 
 l.clear()

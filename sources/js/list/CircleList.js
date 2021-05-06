@@ -73,9 +73,14 @@ class CircleList {
         let p = this.head
         while (p.next != this.head) {
             if (p.data == e) {
-                return p
+                break
             }
             p = p.next
+        }
+        if (p.data == e) {
+            return p
+        } else {
+            return null
         }
     }
     // 定位

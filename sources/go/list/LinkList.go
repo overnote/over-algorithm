@@ -100,11 +100,16 @@ func (l *LinkList)Search(e interface{}) *Node{
 	p := l.head
 	for p.next != nil{
 		if p.data == e {
-			return p
+			break
 		}
 		p = p.next
 	}
-	return nil
+
+	if p.data == e {
+		return p
+	} else {
+		return nil
+	}
 }
 
 // 定位：根据位置查询结点地址

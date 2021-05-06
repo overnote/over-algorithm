@@ -20,9 +20,12 @@ func TestCircleList(t *testing.T) {
 	fmt.Println("删除元素：", l.Delete(3))
 	l.Display()
 
-	l.Update(3, 44)
+	l.Update(1, 21)
 	l.Display()
+	fmt.Println("查询元素 21, 结果：", l.Search(21).data)
 
+	l.Update(4, 44)
+	l.Display()
 	fmt.Println("查询元素 44, 结果：", l.Search(44).data)
 
 	l.Clear()
