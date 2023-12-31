@@ -1,0 +1,13 @@
+/dist/*
+/build/*
+/public/*
+/dist-electron/*
+/.vite/*
+/out/*
+/release/*
+electron-builder.json5
+package.json
+package-lock.json
+pnpm-lock.yaml
+tsconfig.json
+tsconfig.node.json
