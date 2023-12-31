@@ -33,7 +33,8 @@
         "circlelist.h": "c",
         "static.h": "c",
         "stdlib.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "staticlist.h": "c"
     },
     "auto-close-tag.activationOnLanguage": [
         "xml",
