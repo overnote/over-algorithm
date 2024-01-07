@@ -32,5 +32,19 @@
         "HTML (EEx)",
         "HTML (Eex)",
         "plist"
-    ]
+    ],
+    "files.associations": {
+        "*.json": "jsonc",
+        "array": "c",
+        "vector": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "__hash_table": "c",
+        "__split_buffer": "c",
+        "bitset": "c",
+        "initializer_list": "c",
+        "unordered_map": "c",
+        "__locale": "cpp",
+        "__string": "cpp"
+    }
 }
