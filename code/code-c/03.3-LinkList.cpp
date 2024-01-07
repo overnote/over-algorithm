@@ -35,6 +35,30 @@ void Dsiplay(LinkList &L) {
     printf("}\n");
 }
 
+// 按位查找节点
+LNode *GetElem(LinkList L, int idx) {
+    if (idx < 0) {
+        printf("查找位置不合法\n");
+        return NULL;
+    }
+    LNode *p = (LNode *)L; // 当前循环到的节点
+    int j = 0;             // 循环到 idx - 1 的位置
+    while (p != NULL && j < idx) {
+        p = p->next; // 遇到边界时 p 也为NULL
+        j++;
+    }
+    return p;
+}
+
+// 按值查找
+LNode *LocateElem(LinkList L, ElemType e) { 
+    LNode *p = L->next; 
+    while (p != NULL && p->data != e){
+        p = p->next;
+    }
+    return p;   // 否则返回NULL
+}
+
 // 带头节点的按位插入：将头节点视为第0个节点
 int InsertElem(LinkList &L, int idx, ElemType e){
 
@@ -45,13 +69,7 @@ int InsertElem(LinkList &L, int idx, ElemType e){
 
     // 不带头节点时，这里需要额外判断 idx = 1 的情况
 
-    LNode *p = L;   // 当前循环到的节点
-    int j =  0;    // 当前循环到的节点是第几个节点，最终循环到插入位置idx的前一位
-    while (p != NULL && j < idx - 1) {
-        p = p->next;
-        j++;
-    }
-
+    LNode *p = GetElem(L, idx - 1); // 找到 idx - 1 位置
     if(p == NULL){
         printf("插入位置不合法\n");
         return 0;
@@ -61,6 +79,31 @@ int InsertElem(LinkList &L, int idx, ElemType e){
     s->data = e;
     s->next = p->next;
     p->next = s;
+    return 1;
+}
+
+
+int DeleteElem(LinkList &L, int idx){
+        if(idx < 1){
+        printf("删除位置不合法\n");
+        return 0;
+    }
+
+    // 不带头节点时，这里需要额外判断 idx = 1 的情况
+
+    LNode *p = GetElem(L, idx - 1); // 找到 idx - 1 位置
+    if(p == NULL){
+        printf("删除位置不合法\n");
+        return 0;
+    }
+    if(p->next == NULL){
+        printf("删除位置不合法\n"); // idx为最末尾的后一位
+        return 0;
+    }
+
+    LNode *q = p->next;     // 令 q 指向被删除节点
+    p->next = q->next;
+    free(q);
     return 1;
 }
 
@@ -103,34 +146,40 @@ int InsertPriorNode(LNode *p, ElemType e){
     return 1;
 }
 
-int DeleteElem(LinkList &L, int idx){
-        if(idx < 1){
-        printf("删除位置不合法\n");
-        return 0;
-    }
+// 尾插法
+LinkList TailInsert() { 
+    LinkList L = (LinkList)malloc(sizeof(LNode));
 
-    // 不带头节点时，这里需要额外判断 idx = 1 的情况
-
-    LNode *p = L;   // 当前循环到的节点
-    int j =  0;    // 循环到 idx - 1 的位置
-    while (p != NULL && j < idx - 1) {
-        p = p->next;
-        j++;
+    int x;
+    LNode *s, *r = L;
+    scanf("%d", &x);
+    while (x != 9999){
+        s = (LNode *)malloc(sizeof(LNode));
+        s->data = x;
+        r->next = s;
+        r = s;
+        scanf("%d", &x);
     }
+    r->next = NULL;
+    return L;
+}
 
-    if(p == NULL){
-        printf("删除位置不合法\n");
-        return 0;
-    }
-    if(p->next == NULL){
-        printf("删除位置不合法\n"); // idx为最末尾的后一位
-        return 0;
-    }
+// 头插法
+LinkList HeadInsert() { 
+    LinkList L = (LinkList)malloc(sizeof(LNode));
+    L->next = NULL;
 
-    LNode *q = p->next;     // 令 q 指向被删除节点
-    p->next = q->next;
-    free(q);
-    return 1;
+    int x;
+    LNode *s;
+    scanf("%d", &x);
+    while (x != 9999){
+        s = (LNode *)malloc(sizeof(LNode));
+        s->data = x;
+        s->next = L->next;
+        L->next = s;
+        scanf("%d", &x);
+    }
+    return L;
 }
 
 int main() {
