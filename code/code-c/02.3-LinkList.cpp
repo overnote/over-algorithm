@@ -107,6 +107,21 @@ int DeleteElem(LinkList &L, int idx){
     return 1;
 }
 
+int UpdateList(LinkList L, int idx, ElemType e) {
+    if (idx < 1) {
+        printf("查找位置不合法\n");
+        return 0;
+    }
+
+    LNode *p = GetElem(L, idx);
+    if (p == NULL) {
+        printf("查找位置不合法\n");
+        return 0;
+    }
+    p->data = e;
+    return 1;
+}
+
 // 在 p 节点之后插入元素e
 int InsertNextNode(LNode *p, ElemType e){
     if(p == NULL){
@@ -195,5 +210,12 @@ int main() {
     InsertElem(L, 8, 100);
     DeleteElem(L, 2);
     Dsiplay(L);
+
+    LNode *n1 = GetElem(L, 1);
+    printf("%d\n", n1->data);
+    LNode *n2 = GetElem(L, 2);
+    printf("%d\n", n2->data);
+    // LNode *n3 = GetElem(L, 3);
+    // printf("%d\n", n3->data);
     return 0;
 }

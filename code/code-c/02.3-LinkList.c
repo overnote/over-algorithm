@@ -66,7 +66,7 @@ LNode *GetElem(LinkList L, int idx) {
 }
 
 // 按值查找
-int LocateElem(LinkList L, int idx, ElemType e) {
+LNode *LocateElem(LinkList L, ElemType e) {
     LNode *p = L->next;
     while (p != NULL && p->data != e) {
         p = p->next;
@@ -135,7 +135,20 @@ int DeleteElem(LinkList L, int idx) {
     return 1;
 }
 
-int UpdateList(LinkList L, int idx, ElemType e) {}
+int UpdateList(LinkList L, int idx, ElemType e) {
+    if (idx < 1) {
+        printf("查找位置不合法\n");
+        return 0;
+    }
+
+    LNode *p = GetElem(L, idx);
+    if (p == NULL) {
+        printf("查找位置不合法\n");
+        return 0;
+    }
+    p->data = e;
+    return 1;
+}
 
 // 后插操作：在 p 节点之后插入元素e
 int InsertNextNode(LNode *p, ElemType e) {
@@ -226,6 +239,16 @@ int main() {
     Dsiplay(L);
     InsertElem(L, 8, 100);
     DeleteElem(L, 2);
+    Dsiplay(L);
+
+    LNode *n1 = GetElem(L, 1);
+    printf("%d\n", n1->data);
+    LNode *n2 = GetElem(L, 2);
+    printf("%d\n", n2->data);
+    // LNode *n3 = GetElem(L, 3);
+    // printf("%d\n", n3->data);
+
+    UpdateList(L, 2, 10);
     Dsiplay(L);
     return 0;
 }
