@@ -9,7 +9,7 @@ typedef struct LNode {
 } LNode, *LinkList;
 
 // 如果需要带头节点，则 LinkList 声明后需要先初始化
-int InitList(LinkList &L) { 
+int InitLinkList(LinkList &L) { 
     L = (LNode *)malloc(sizeof(LNode));
     if(L == NULL){
         printf("申请L失败\n");
@@ -200,7 +200,7 @@ LinkList HeadInsert() {
 int main() {
 
     LinkList L; // 声明一个空的单链表指针
-    InitList(L);
+    InitLinkList(L);
     Dsiplay(L);
     InsertElem(L, 1, 5);
     Dsiplay(L);

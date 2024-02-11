@@ -1,3 +1,7 @@
+/**
+ * 单链表
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,8 +12,8 @@ typedef struct LNode {
     struct LNode *next;
 } LNode, *LinkList;
 
-// 如果需要带头节点，则 LinkList 声明后需要先初始化
-int InitList(LinkList *L) {
+// 初始化方式一：因为带头节点， LinkList 声明后需要先初始化
+int InitLinkList(LinkList *L) {
     *L = (LNode *)malloc(sizeof(LNode));
     if (L == NULL) {
         printf("申请L失败\n");
@@ -21,7 +25,7 @@ int InitList(LinkList *L) {
     return 1;
 }
 
-// 也可以使用该方法直接生成一个 LinkList
+// 初始化方式二：直接生成一个 LinkList
 LinkList NewList() {
     LinkList L = (LNode *)malloc(sizeof(LNode));
     if (L == NULL) {
@@ -228,7 +232,7 @@ LinkList HeadInsert() {
 int main() {
 
     LinkList L;
-    InitList(&L); // 传入LinkList地址
+    InitLinkList(&L); // 传入LinkList地址
     // LinkList L = NewList(); // 也可以将上述2步使用创建方式一步写完
 
     Dsiplay(L);

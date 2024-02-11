@@ -16,7 +16,7 @@ typedef struct {
 } SqList;
 
 // 初始化数据
-void InitList(SqList *L) {
+void InitSqList(SqList *L) {
     L->length = 0;
     for (int i = 0; i < MAX_SIZE - 1; i++) {
         L->data[i] = 0;
@@ -30,6 +30,18 @@ void Display(SqList L) {
         printf("%d ", L.data[i]);
     }
     printf("}\n");
+}
+
+int Length(SqList L) { return L.length; }
+
+// 清空
+void ClearList(SqList *L) { L->length = 0; }
+
+// 销毁
+void DestroyList(SqList *L) {
+    if (L->data != NULL) {
+        free(L->data);
+    }
 }
 
 // 增：按照一个位置插入数据
@@ -106,21 +118,9 @@ int LocateElem(SqList L, int *idx, ElemType e) {
     return 0;
 }
 
-int Length(SqList L) { return L.length; }
-
-// 清空
-void ClearList(SqList *L) { L->length = 0; }
-
-// 销毁
-void DestroyList(SqList *L) {
-    if (L->data != NULL) {
-        free(L->data);
-    }
-}
-
 int main() {
     SqList L;
-    InitList(&L);
+    InitSqList(&L);
     Display(L);
     InsertElem(&L, 3, 1);
     InsertElem(&L, 6, 2);
