@@ -39,17 +39,11 @@ void ClearList(SqList *L) { L->length = 0; }
 
 // 显示顺序表
 void Display(SqList L) {
-
-    if (Length(L) == 0) {
-        printf("顺序表为空\n");
-        return;
-    }
-
-    printf("{ ");
+    printf("[ ");
     for (int i = 0; i < L.length; i++) {
         printf("%d ", L.data[i]);
     }
-    printf("}\n");
+    printf("]\n");
 }
 
 // 增：按照一个位置插入数据
@@ -78,10 +72,6 @@ int InsertElem(SqList *L, int idx, ElemType e) {
 int DeleteElem(SqList *L, int idx, ElemType *e) {
     if (idx < 1 || idx > L->length) {
         printf("删除位置不合法\n");
-        return -1;
-    }
-    if (L->length == 0) {
-        printf("空表无元素可移除\n");
         return -1;
     }
 
@@ -133,6 +123,7 @@ int main() {
     //  SqList L = InitSqList();    // 第二种初始化方式下的声明赋值操作
     printf("----执行了初始化操作----\n");
     Display(L);
+
     InsertElem(&L, 1, 5);
     InsertElem(&L, 2, 6);
     InsertElem(&L, 3, 1);
